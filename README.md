@@ -12,7 +12,7 @@ This directory contains the documentation and privacy policy pages for the Chat 
 
 To deploy these documentation pages using GitHub Pages:
 
-### Method 1: Using the docs folder (Recommended)
+### Method 1: Using the website folder (Recommended)
 
 1. **Push this project to GitHub:**
    ```bash
@@ -33,7 +33,7 @@ To deploy these documentation pages using GitHub Pages:
    - Scroll down to the **Pages** section in the left sidebar
    - Under **Source**, select:
      - Branch: `main`
-     - Folder: `/docs`
+     - Folder: `/website`
    - Click **Save**
 
 3. **Access your documentation:**
@@ -53,7 +53,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'docs/**'
+      - 'website/**'
 
 jobs:
   deploy:
@@ -64,7 +64,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./website
 ```
 
 ## Using the Privacy Policy URL
