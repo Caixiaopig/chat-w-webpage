@@ -41,13 +41,13 @@
     gap: 2rem;
 }
 
-.nav-menu a {
+.nav-menu a:not(.btn) {
     color: var(--text-secondary);
     font-weight: 500;
     transition: color 0.2s;
 }
 
-.nav-menu a:hover {
+.nav-menu a:not(.btn):hover {
     color: var(--text-primary);
 }
 
