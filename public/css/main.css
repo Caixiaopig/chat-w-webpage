@@ -285,13 +285,21 @@
         grid-template-columns: 1fr;
     }
 
-    .bento-grid {
+    .bento-grid,
+    .pricing-grid {
         grid-template-columns: 1fr;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Pricing Grid Layout */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 /* Logo Cloud / Trust Section */
