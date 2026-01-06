@@ -100,6 +100,7 @@
     line-height: 1.1;
     margin-bottom: 1.5rem;
     background: linear-gradient(to right, #fff, #94a3b8);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -332,12 +333,14 @@
     width: auto;
     object-fit: contain;
     opacity: 0.5;
-    filter: grayscale(100%) brightness(100);
+    /* Force all logos to be flat white (Black -> Brightness 0 -> Invert -> White) */
+    filter: brightness(0) invert(1);
     transition: all 0.3s ease;
 }
 
 .provider-logo:hover {
     opacity: 1;
     transform: scale(1.05);
-    filter: grayscale(0%) brightness(100) drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+    /* Keep white and add strong glow */
+    filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
 }
