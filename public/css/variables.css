@@ -1,0 +1,66 @@
+:root {
+    /* 
+     * Deep Space Theme Palette 
+     * Backgrounds: Rich, dark blues and voids
+     */
+    --bg-void: #020617;       /* Slate 950 - Main background */
+    --bg-surface: #0f172a;    /* Slate 900 - Card/Section background */
+    --bg-surface-glass: rgba(15, 23, 42, 0.7); /* Glass effect */
+    --bg-overlay: rgba(2, 6, 23, 0.8);
+
+    /* 
+     * Primary Brand Colors 
+     * Gradient: Purple to Blue to Cyan
+     */
+    --primary-500: #6366f1;   /* Indigo 500 */
+    --primary-600: #4f46e5;   /* Indigo 600 */
+    --accent-cyan: #06b6d4;   /* Cyan 500 - Glows */
+    --accent-purple: #8b5cf6; /* Violet 500 - Secondary Glows */
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --gradient-glow: linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #8b5cf6 100%);
+
+    /* 
+     * Text Colors 
+     * High contrast for readability on dark mode
+     */
+    --text-primary: #f8fafc;  /* Slate 50 */
+    --text-secondary: #cbd5e1; /* Slate 300 */
+    --text-muted: #64748b;    /* Slate 500 */
+
+    /* 
+     * Borders & Lines 
+     */
+    --border-light: rgba(255, 255, 255, 0.1);
+    --border-glow: rgba(99, 102, 241, 0.3);
+
+    /* 
+     * Spacing & Layout 
+     */
+    --container-width: 1280px;
+    --header-height: 72px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
+
+    /* 
+     * Effects 
+     */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
+    --blur-glass: 12px;
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light mode overrides (if we support it immediately, but focus is dark mode first) */
+/* 
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-void: #ffffff;
+        --bg-surface: #f8fafc;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+    }
+} 
+*/

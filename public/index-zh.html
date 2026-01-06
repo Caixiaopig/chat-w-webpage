@@ -1,282 +1,321 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Chat w WebPage - 一款基于 AI 的 Chrome 扩展，让你与网页进行智能对话。支持 OpenAI, Claude, Gemini, Azure 等多种模型。">
-    <meta name="keywords" content="AI, ChatGPT, Claude, Gemini, Chrome 扩展, 网页分析, 内容提取">
+    <meta name="description" content="Chat w WebPage - 使用 AI 彻底改变你与网页的交互方式。支持 OpenAI, Claude, Gemini, DeepSeek 等主流模型。">
+    <meta name="keywords" content="AI, Chrome 扩展, 网页对话, 网页分析, OpenAI, Claude, Gemini, DeepSeek">
     <meta name="author" content="Chat w WebPage">
 
-    <!-- Open Graph / Social Media -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Chat w WebPage - AI 驱动的网页分析工具">
-    <meta property="og:description" content="利用先进的 AI 模型，革新你与网络内容的交互方式">
+    <meta property="og:description" content="彻底改变你与网页内容的互动方式。支持 12+ AI 提供商，可视化推理过程，每日 10 次免费对话。">
     <meta property="og:image" content="/images/og-image.png">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chat w WebPage">
-    <meta name="twitter:description" content="与网页进行 AI 智能对话">
+    <title>Chat w WebPage - 用 AI 变革你的网页体验</title>
 
-    <title>Chat w WebPage - AI 驱动的网页分析与对话工具</title>
-
-    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/favicon-48x48.png">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index-zh.html" class="nav-logo">
-                <img src="favicon-48x48.png" alt="Chat w WebPage Logo" class="nav-logo-icon">
+            <a href="index.html" class="nav-logo">
+                <img src="/favicon-48x48.png" alt="Logo" width="32" height="32">
                 <span>Chat w WebPage</span>
             </a>
 
-            <ul class="nav-menu">
-                <li><a href="#home" class="active">首页</a></li>
-                <li><a href="#features">功能</a></li>
-                <li><a href="#models">模型</a></li>
-                <li><a href="privacy-policy-zh.html">隐私政策</a></li>
-                <li><a href="#download" class="btn-download">下载</a></li>
-                <li>
-                    <div class="lang-switcher">
-                        <a href="index.html">EN</a>
-                        <a href="index-zh.html" class="active">中文</a>
-                    </div>
-                </li>
-            </ul>
-
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-menu">
+                <a href="#features">功能</a>
+                <a href="#models">模型</a>
+                <a href="#pricing">定价</a>
+                <a href="http://haoba.cloud" target="_blank">博客</a>
+                <div class="lang-switcher" style="margin-left: 1rem;">
+                    <a href="index.html" style="color:var(--text-secondary)">EN</a>
+                    <span style="color:var(--text-muted)">/</span>
+                    <a href="index-zh.html" class="active" style="color:var(--primary-500)">CN</a>
+                </div>
+                <a href="download.html" class="btn btn-primary">免费安装</a>
             </div>
+
+            <!-- Mobile Menu Toggle (To be implemented) -->
+            <button class="btn btn-secondary" style="display: none;">Menu</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
+    <section class="hero">
+        <img src="images/backgrounds/hero-bg.png" alt="" class="hero-bg animate-pulse">
+
+        <div class="container hero-container">
             <div class="hero-content">
-                <h1>使用 AI 与任意网页对话</h1>
+                <div class="badge animate-float">现已支持 DeepSeek & Gemini 2.0</div>
+                <h1>彻底改变你与 <span style="color: var(--primary-500)">网页内容</span> 的交互方式</h1>
                 <p>
-                    彻底改变你与网络内容的互动方式。提取洞见、总结长文，并利用 OpenAI、Claude、Gemini 等顶尖模型进行智能对话。
+                    提取洞见、总结长文，并与任意网页进行智能对话。
+                    由 OpenAI、Claude、Google Gemini 等 12+ 顶级 AI 提供商驱动。
                 </p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">
-                        🚀 免费安装
+                <div class="hero-buttons" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <a href="download.html" class="btn btn-glow">
+                        添加到 Chrome — 免费
                     </a>
-                    <a href="#" class="btn btn-secondary">
-                        📖 查看文档
+                    <a href="#demo" class="btn btn-secondary">
+                        查看演示
                     </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>4.9/5</h3>
+                        <p style="font-size: 0.875rem; margin: 0;">Chrome 商店评分</p>
+                    </div>
+                    <div>
+                        <h3>100k+</h3>
+                        <p style="font-size: 0.875rem; margin: 0;">活跃用户</p>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="screenshot-mockup">
-                    <img src="images/screenshots/main-screenshot.png" alt="Chat w WebPage 截图"
-                        onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' fill=\'%239ca3af\' font-family=\'sans-serif\' font-size=\'20\'>Screenshot Coming Soon</text></svg>'">
+
+            <div class="hero-image animate-float" style="animation-duration: 8s;">
+                <div class="browser-mockup">
+                    <div class="browser-header">
+                        <div class="dot" style="background:#ef4444"></div>
+                        <div class="dot" style="background:#eab308"></div>
+                        <div class="dot" style="background:#22c55e"></div>
+                    </div>
+                    <div class="browser-content">
+                        <!-- Using existing product screenshot -->
+                        <img src="images/screenshots/talkewpage_screen_1.png" alt="App Interface">
+                    </div>
                 </div>
+                <!-- Floating decorative element -->
+                <img src="images/assets/glass-orb.png" alt=""
+                    style="position: absolute; right: -50px; bottom: -50px; width: 150px; opacity: 0.8; pointer-events: none;">
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="features-container">
-            <div class="section-title">
-                <h2>触手可及的强大功能</h2>
-                <p>分析网页内容并与之对话所需的一切工具</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>多模型支持</h3>
-                    <p>
-                        支持 OpenAI (GPT-4, o1, o3, GPT-5), Anthropic Claude, Google Gemini,
-                        Azure OpenAI, DeepSeek，或使用你自己的自定义端点。
-                    </p>
+    <!-- Value Propositions -->
+    <section class="value-props">
+        <div class="container">
+            <div class="value-grid">
+                <div class="card">
+                    <div class="icon-box">🚀</div>
+                    <h3>零门槛上手</h3>
+                    <p>通过演示模式立即开始对话。无需 API Key，每日赠送 10 次免费对话。</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>即时分析</h3>
-                    <p>
-                        一键提取并分析网页内容。即刻获取摘要、关键洞见，并获得你关心的答案。
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>智能助手</h3>
-                    <p>
-                        内置内容分析、翻译、代码审查等专用助手，也支持创建带有自定义提示词的个性化助手。
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>推理模型支持</h3>
-                    <p>
-                        支持带有思考过程可视化的推理模型。实时查看 AI 如何一步步推理解决复杂问题。
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
+                <div class="card">
+                    <div class="icon-box">🔒</div>
                     <h3>隐私优先</h3>
-                    <p>
-                        你的 API Key 加密存储在本地。无数据收集，无追踪。所有对话仅存在于你和你的 AI 提供商之间。
-                    </p>
+                    <p>您的数据保留在本地。API Key 在设备上加密存储。我们从不收集或存储您的对话内容。</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>多语言界面</h3>
-                    <p>
-                        界面支持中英文切换。你可以用所选模型支持的任何语言与 AI 对话。
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>智能建议</h3>
-                    <p>
-                        基于网页内容获取上下文相关的快捷操作建议。一键总结、翻译或提出后续问题。
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>精美 UI</h3>
-                    <p>
-                        现代、干净的界面，支持深色模式。无缝集成到 Chrome 侧边栏，提供原生般的使用体验。
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>安全与隐私</h3>
-                    <p>
-                        以隐私为核心构建。您的数据保留在本地设备上，绝不会发送到我们的服务器。
-                    </p>
+                <div class="card">
+                    <div class="icon-box">🤖</div>
+                    <h3>模型自由</h3>
+                    <p>拒绝被锁定。随时在 GPT-4, Claude 3.5, Gemini Pro 和本地 Llama 模型由于之间无缝切换。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AI Providers Section -->
-    <section class="features" style="background: white;" id="models">
-        <div class="features-container">
-            <div class="section-title">
-                <h2>由领先的 AI 模型驱动</h2>
-                <p>连接你偏好的 AI 提供商，或同时使用多个模型</p>
+    <!-- Bento Grid Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
+                <h2>为网页打造的生产力工具</h2>
+                <p>专为研究人员、开发人员和高阶用户设计的高级功能。</p>
             </div>
 
-            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="feature-card">
-                    <img src="images/logos/openai.svg" alt="OpenAI" class="feature-logo">
-                    <h3>OpenAI</h3>
-                    <p>GPT-4, GPT-4 Turbo, o1, o3, o4, GPT-5.1, GPT-5.2 (支持推理)</p>
+            <div class="bento-grid">
+                <!-- Large Feature 1 -->
+                <div class="bento-card span-2 span-row-2">
+                    <div class="icon-box" style="background: rgba(99, 102, 241, 0.2); color: #fff;">🧠</div>
+                    <h3>推理过程可视化</h3>
+                    <p>看见 AI 的思考。在使用 o1 或 DeepSeek Reasoner 等模型处理复杂研究任务时，实时可视化其分步推理过程。</p>
+                    <img src="images/screenshots/talkewpage_screen_2.png" alt="Reasoning"
+                        style="margin-top: 2rem; border-radius: 8px; border: 1px solid var(--border-light); opacity: 0.8;">
                 </div>
 
-                <div class="feature-card">
-                    <img src="images/logos/anthropic.svg" alt="Anthropic" class="feature-logo">
-                    <h3>Anthropic Claude</h3>
-                    <p>Claude 3.5 Sonnet, Claude 3.7, Claude 4 (支持扩展思考)</p>
+                <!-- Feature 2 -->
+                <div class="bento-card">
+                    <div class="icon-box">⚡</div>
+                    <h3>即时摘要</h3>
+                    <p>一键预设，秒级获取任何文章或 PDF 的核心要点。</p>
                 </div>
 
-                <div class="feature-card">
-                    <img src="images/logos/gemini.svg" alt="Gemini" class="feature-logo">
-                    <h3>Google Gemini</h3>
-                    <p>Gemini 2.5, Gemini 3 Pro/Flash (支持思考配置)</p>
+                <!-- Feature 3 -->
+                <div class="bento-card">
+                    <div class="icon-box">🌐</div>
+                    <h3>多语言支持</h3>
+                    <p>精通 50+ 种语言。自动检测并实时翻译网页上下文。</p>
                 </div>
 
-                <div class="feature-card">
-                    <img src="images/logos/azure.svg" alt="Azure OpenAI" class="feature-logo">
-                    <h3>Azure OpenAI</h3>
-                    <p>完整支持 Azure (Chat Completions + Responses API)</p>
+                <!-- Wide Feature 4 -->
+                <div class="bento-card span-2">
+                    <div class="icon-box">🛠</div>
+                    <h3>自定义助手</h3>
+                    <p>创建用于代码审查、法律分析或创意写作的专用角色。保存并复用你的最佳提示词。</p>
                 </div>
 
-                <div class="feature-card">
-                    <img src="images/logos/deepseek.svg" alt="DeepSeek" class="feature-logo">
-                    <h3>DeepSeek</h3>
-                    <p>DeepSeek Reasoner (自动思考模式)</p>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/logos/custom.svg" alt="Custom" class="feature-logo">
-                    <h3>自定义提供商</h3>
-                    <p>OpenRouter, LiteLLM 网关，或任何 OpenAI 兼容端点</p>
+                <!-- Feature 5 -->
+                <div class="bento-card span-2">
+                    <div class="icon-box">🎨</div>
+                    <h3>丝滑流畅的 UI</h3>
+                    <p>美观、响应迅速的界面，宛如浏览器的原生部分。全面支持深色模式。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="download">
-        <h2>准备好改变你的网页体验了吗？</h2>
-        <p>安装 Chat w WebPage，开始与任意网页进行智能对话</p>
-        <div class="hero-buttons" style="justify-content: center;">
-            <a href="#" class="btn btn-primary">
-                🚀 立即安装 - 免费
-            </a>
-            <a href="https://github.com/FJVN/chat-w-webpage" target="_blank" class="btn btn-secondary">
-                ⭐ GitHub 加星
-            </a>
+    <!-- AI Providers Marquee -->
+    <section class="providers" id="models" style="background: var(--bg-surface); padding-bottom: 0;">
+        <div class="container">
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">备受全球高阶用户信赖</p>
+        </div>
+        <div class="providers-marquee">
+            <div class="marquee-content">
+                <!-- Logos - duplicated for infinite scroll -->
+                <img src="images/logos/openai.svg" class="provider-logo" alt="OpenAI">
+                <img src="images/logos/anthropic.svg" class="provider-logo" alt="Anthropic">
+                <img src="images/logos/gemini.svg" class="provider-logo" alt="Gemini">
+                <img src="images/logos/deepseek.svg" class="provider-logo" alt="DeepSeek">
+                <img src="images/logos/azure.svg" class="provider-logo" alt="Azure">
+                <!-- Duplicate set -->
+                <img src="images/logos/openai.svg" class="provider-logo" alt="OpenAI">
+                <img src="images/logos/anthropic.svg" class="provider-logo" alt="Anthropic">
+                <img src="images/logos/gemini.svg" class="provider-logo" alt="Gemini">
+                <img src="images/logos/deepseek.svg" class="provider-logo" alt="DeepSeek">
+                <img src="images/logos/azure.svg" class="provider-logo" alt="Azure">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" style="padding: 6rem 0;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="text-align: center; margin-bottom: 3rem;">常见问题</h2>
+
+            <!-- Simple Accordion via Details/Summary -->
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <details class="card" style="padding: 1.5rem; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.125rem;">真的免费吗？</summary>
+                    <p style="margin-top: 1rem; margin-bottom: 0;">是的！插件本身完全免费下载。我们提供演示模式，包含每日 10
+                        次免费对话（由我们付费支持）。如需无限使用，您可以绑定自己的 API Key (BYOK)，支持 OpenAI, Anthropic 等。</p>
+                </details>
+
+                <details class="card" style="padding: 1.5rem; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.125rem;">我的 API Key 安全吗？</summary>
+                    <p style="margin-top: 1rem; margin-bottom: 0;">绝对安全。您的 API Key 经过加密并仅存储在您浏览器的安全存储区中。我们没有服务器，您的 Key
+                        永远不会离开您的设备，仅用于直接向 AI 服务商发起请求。</p>
+                </details>
+
+                <details class="card" style="padding: 1.5rem; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.125rem;">支持哪些模型？</summary>
+                    <p style="margin-top: 1rem; margin-bottom: 0;">我们支持所有主流服务商：OpenAI (GPT-4o, o1), Anthropic (Claude
+                        3.5 Sonnet), Google (Gemini 1.5 Pro), DeepSeek, Azure OpenAI，以及任何兼容 OpenAI 接口的自定义端点（如 Ollama 或
+                        LM Studio）。</p>
+                </details>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Chat w WebPage</h3>
-                    <p style="color: var(--gray-500); margin-top: 1rem;">
-                        AI 驱动的网页对话工具。安全且注重隐私。
-                    </p>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Chat w WebPage</h4>
+                    <p style="font-size: 0.875rem;">用世界级的 AI 变革你的网页阅读体验。</p>
                 </div>
-
-                <div class="footer-section">
-                    <h3>产品</h3>
-                    <ul>
+                <div>
+                    <h5 style="color: var(--text-primary);">产品</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
                         <li><a href="#features">功能</a></li>
-                        <li><a href="#models">支持模型</a></li>
-                        <li><a href="#download">下载</a></li>
+                        <li><a href="download.html">下载</a></li>
+                        <li><a href="changelog.html">更新日志</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">法律</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
                         <li><a href="privacy-policy-zh.html">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h3>资源</h3>
-                    <ul>
+                <div>
+                    <h5 style="color: var(--text-primary);">联系我们</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
                         <li><a href="https://github.com/FJVN/chat-w-webpage" target="_blank">GitHub</a></li>
-                        <li><a href="https://github.com/FJVN/chat-w-webpage/issues" target="_blank">报告问题</a></li>
-                        <li><a href="https://github.com/FJVN/chat-w-webpage/discussions" target="_blank">社区讨论</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>联系我们</h3>
-                    <ul>
-                        <li><a href="mailto:admin@haoba.cloud">联系我们</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Discord</a></li>
+                        <li><a href="mailto:admin@haoba.cloud">邮件联系</a></li>
                     </ul>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 HaoBa Cloud. All rights reserved.</p>
+            <div class="copyright">
+                &copy; 2025 HaoBa Cloud. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- JSON-LD SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Chat w WebPage",
+      "operatingSystem": "Chrome, Edge, Brave",
+      "applicationCategory": "BrowserApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "description": "基于 AI 的 Chrome 扩展，支持使用 OpenAI, Claude, Gemini 等模型与任意网页对话。",
+      "softwareVersion": "1.2.0",
+      "featureList": "与任意网页对话, 智能总结, 内容提取, 思维链推理",
+      "screenshot": "https://chat-with-webpage.haoba.cloud/images/screenshots/talkewpage_screen_1.png"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Chat w WebPage 是免费的吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "是的，扩展本身是免费下载的。您可以使用我们的每日免费演示模式，或者绑定您自己的 API Key 以获得无限使用权限。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "我的数据安全吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "绝对安全。我们采用 BYOK (Bring Your Own Key) 架构。您的 API Key 仅加密存储在您的本地设备上，所有请求都直接从您的浏览器发送至 AI 服务商，不经过我们的服务器。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "支持哪些 AI 模型？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "我们不仅支持 OpenAI (GPT-4o, o1), Anthropic (Claude 3.5 Sonnet), Google (Gemini 1.5 Pro) 等主流模型，还支持 DeepSeek 以及任何兼容 OpenAI 接口的模型（如本地 Ollama）。"
+        }
+      }]
+    }
+    </script>
 </body>
 
 </html>

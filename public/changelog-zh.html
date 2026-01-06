@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新日志 - Chat w WebPage</title>
+    <link rel="icon" href="/favicon-48x48.png">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .changelog-header {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 4rem auto;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-light);
+        }
+
+        .release {
+            position: relative;
+            margin-bottom: 4rem;
+        }
+
+        .release::before {
+            content: "";
+            position: absolute;
+            left: -2.4rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: var(--bg-void);
+            border: 2px solid var(--primary-500);
+        }
+
+        .version-tag {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary-500);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-bottom: 0.5rem;
+        }
+
+        .release-date {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-left: 1rem;
+        }
+
+        .release h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .release ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .release li {
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-new {
+            background: var(--primary-500);
+            color: white;
+            padding: 0.1rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index-zh.html" class="nav-logo">
+                <img src="/favicon-48x48.png" alt="Logo" width="32" height="32">
+                <span>Chat w WebPage</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index-zh.html">首页</a>
+                <a href="features-zh.html">功能</a>
+                <div class="lang-switcher" style="margin-left: 1rem;">
+                    <a href="changelog.html" style="color:var(--text-secondary)">EN</a>
+                    <span style="color:var(--text-muted)">/</span>
+                    <a href="changelog-zh.html" class="active" style="color:var(--primary-500)">CN</a>
+                </div>
+                <a href="download-zh.html" class="btn btn-primary">免费安装</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="changelog-header container">
+        <h1>更新日志 (Changelog)</h1>
+        <p style="color: var(--text-secondary); margin-top: 1rem;">
+            Chat w WebPage 的最新更新和改进。
+        </p>
+    </header>
+
+    <!-- Timeline -->
+    <div class="container timeline">
+
+        <!-- v1.2.0 -->
+        <div class="release">
+            <div>
+                <span class="version-tag">v1.2.0</span>
+                <span class="release-date">2026年1月5日</span>
+                <span class="badge-new">最新</span>
+            </div>
+            <h2>推理与模型更新</h2>
+            <ul>
+                <li><strong>新增:</strong> 添加对 DeepSeek Reasoner 和 Gemini 2.0 Flash 思考模型的支持。</li>
+                <li><strong>新增:</strong> 可视化兼容模型的推理步骤（点击展开思维链）。</li>
+                <li><strong>改进:</strong> 增强了数学公式 (LaTeX) 的 Markdown 渲染效果。</li>
+                <li><strong>修复:</strong> 解决了部分自定义 API 端点无法正确保存的问题。</li>
+            </ul>
+        </div>
+
+        <!-- v1.1.0 -->
+        <div class="release">
+            <div>
+                <span class="version-tag">v1.1.0</span>
+                <span class="release-date">2025年12月20日</span>
+            </div>
+            <h2>自定义助手与预设</h2>
+            <ul>
+                <li><strong>新增:</strong> 创建并保存带有特定系统提示词的自定义助手。</li>
+                <li><strong>新增:</strong> 添加"一键总结"预设，便于快速阅读。</li>
+                <li><strong>改进:</strong> 通过 Ollama (localhost:11434) 支持本地模型。</li>
+                <li><strong>界面:</strong> 深色模式现已成为默认体验。</li>
+            </ul>
+        </div>
+
+        <!-- v1.0.0 -->
+        <div class="release">
+            <div>
+                <span class="version-tag">v1.0.0</span>
+                <span class="release-date">2025年12月1日</span>
+            </div>
+            <h2>初始发布</h2>
+            <ul>
+                <li><strong>发布:</strong> Chat w WebPage 允许您与任何活动标签页聊天。</li>
+                <li><strong>隐私:</strong> 采用 BYOK 架构，密钥本地存储。</li>
+                <li><strong>支持:</strong> 初步支持 OpenAI GPT-4 和 Claude 3.5 Sonnet。</li>
+                <li><strong>核心:</strong> 用于文章和文档的内容提取引擎。</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Chat w WebPage</h4>
+                    <p style="font-size: 0.875rem;">用世界级的 AI 变革你的网页阅读体验。</p>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">产品</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="index-zh.html#features">功能</a></li>
+                        <li><a href="download-zh.html">下载</a></li>
+                        <li><a href="changelog-zh.html">更新日志</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">法律</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="privacy-policy-zh.html">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">联系我们</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="https://github.com/FJVN/chat-w-webpage" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:admin@haoba.cloud">邮件联系</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 HaoBa Cloud. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

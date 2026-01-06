@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - Chat w WebPage</title>
+    <link rel="icon" href="/favicon-48x48.png">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .changelog-header {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 4rem auto;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-light);
+        }
+
+        .release {
+            position: relative;
+            margin-bottom: 4rem;
+        }
+
+        .release::before {
+            content: "";
+            position: absolute;
+            left: -2.4rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: var(--bg-void);
+            border: 2px solid var(--primary-500);
+        }
+
+        .version-tag {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary-500);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-bottom: 0.5rem;
+        }
+
+        .release-date {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-left: 1rem;
+        }
+
+        .release h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .release ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .release li {
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-new {
+            background: var(--primary-500);
+            color: white;
+            padding: 0.1rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/favicon-48x48.png" alt="Logo" width="32" height="32">
+                <span>Chat w WebPage</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <div class="lang-switcher" style="margin-left: 1rem;">
+                    <a href="changelog.html" class="active" style="color:var(--primary-500)">EN</a>
+                    <span style="color:var(--text-muted)">/</span>
+                    <a href="changelog-zh.html" style="color:var(--text-secondary)">CN</a>
+                </div>
+                <a href="download.html" class="btn btn-primary">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="changelog-header container">
+        <h1>Changelog</h1>
+        <p style="color: var(--text-secondary); margin-top: 1rem;">
+            New updates and improvements to Chat w WebPage.
+        </p>
+    </header>
+
+    <!-- Timeline -->
+    <div class="container timeline">
+
+        <!-- v1.2.0 -->
+        <div class="release">
+            <div>
+                <span class="version-tag">v1.2.0</span>
+                <span class="release-date">January 5, 2026</span>
+                <span class="badge-new">Latest</span>
+            </div>
+            <h2>Reasoning & Models Update</h2>
+            <ul>
+                <li><strong>New:</strong> Added support for DeepSeek Reasoner and Gemini 2.0 Flash thinking models.</li>
+                <li><strong>New:</strong> Visualized reasoning steps for compatible models (click to expand
+                    chain-of-thought).</li>
+                <li><strong>Improvement:</strong> Enhanced Markdown rendering for mathematical formulas (LaTeX).</li>
+                <li><strong>Fix:</strong> Resolved an issue where some customized API endpoints were not saving
+                    correctly.</li>
+            </ul>
+        </div>
+
+        <!-- v1.1.0 -->
+        <div class="release">
+            <div>
+                <span class="version-tag">v1.1.0</span>
+                <span class="release-date">December 20, 2025</span>
+            </div>
+            <h2>Custom Assistants & Presets</h2>
+            <ul>
+                <li><strong>New:</strong> Create and save Custom Assistants with specific system prompts.</li>
+                <li><strong>New:</strong> Added "One-Click Summarize" preset for quick reading.</li>
+                <li><strong>Improvement:</strong> Added support for local models via Ollama (localhost:11434).</li>
+                <li><strong>UI:</strong> Dark mode is now the default experience.</li>
+            </ul>
+        </div>
+
+        <!-- v1.0.0 -->
+        <div class="release">
+            <div>
+                <span class="version-tag">v1.0.0</span>
+                <span class="release-date">December 1, 2025</span>
+            </div>
+            <h2>Initial Release</h2>
+            <ul>
+                <li><strong>Launch:</strong> Chat w WebPage allows you to chat with any active tab.</li>
+                <li><strong>Privacy:</strong> BYOK architecture with local storage for keys.</li>
+                <li><strong>Support:</strong> Initial support for OpenAI GPT-4 and Claude 3.5 Sonnet.</li>
+                <li><strong>Core:</strong> Content extraction engine for articles and documentation.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Chat w WebPage</h4>
+                    <p style="font-size: 0.875rem;">Transform your web reading experience with world-class AI.</p>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">Product</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">Legal</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">Connect</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="https://github.com/FJVN/chat-w-webpage" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:admin@haoba.cloud">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 HaoBa Cloud. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

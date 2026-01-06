@@ -6,169 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Chat w WebPage</title>
     <link rel="icon" href="/favicon-48x48.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #3b82f6;
-        }
-
-        h1 {
-            color: #1f2937;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #6b7280;
-            font-size: 1.1em;
-        }
-
-        .last-updated {
-            color: #9ca3af;
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-
-        h2 {
-            color: #1f2937;
-            font-size: 1.8em;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        h3 {
-            color: #374151;
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: #4b5563;
-        }
-
-        ul,
-        ol {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            color: #4b5563;
-        }
-
-        .highlight-box {
-            background: #eff6ff;
-            border-left: 4px solid #3b82f6;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
-        }
-
-        .highlight-box strong {
-            color: #1e40af;
-        }
-
-        .contact-section {
-            background: #f9fafb;
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 40px;
-        }
-
-        a {
-            color: #3b82f6;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        code {
-            background: #f3f4f6;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-        }
-
-        .lang-switcher {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .lang-switcher a {
-            margin: 0 10px;
-            padding: 5px 15px;
-            background: #e5e7eb;
-            border-radius: 4px;
-            display: inline-block;
-        }
-
-        .lang-switcher a.active {
-            background: #3b82f6;
-            color: white;
-        }
-    </style>
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="lang-switcher">
-            <a href="privacy-policy.html" class="active">English</a>
-            <a href="privacy-policy-zh.html">简体中文</a>
-        </div>
 
-        <header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/favicon-48x48.png" alt="Logo" width="32" height="32">
+                <span>Chat w WebPage</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="index.html#features">Features</a>
+                <div class="lang-switcher" style="margin-left: 1rem;">
+                    <a href="privacy-policy.html" class="active" style="color:var(--primary-500)">EN</a>
+                    <span style="color:var(--text-muted)">/</span>
+                    <a href="privacy-policy-zh.html" style="color:var(--text-secondary)">CN</a>
+                </div>
+                <a href="download.html" class="btn btn-primary">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 120px; padding-bottom: 60px; max-width: 800px;">
+        <header
+            style="text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-light);">
             <h1>Privacy Policy</h1>
-            <p class="subtitle">Chat w WebPage Chrome Extension</p>
-            <p class="last-updated">Last Updated: December 26, 2025</p>
+            <p style="color: var(--text-secondary); font-size: 1.125rem;">Chat w WebPage Chrome Extension</p>
+            <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.5rem;">Last Updated: December 26,
+                2025</p>
         </header>
 
-        <section>
-            <div class="highlight-box">
+        <section class="policy-content">
+            <div class="card" style="padding: 1.5rem; margin-bottom: 2rem; border-left: 4px solid var(--primary-500);">
                 <strong>TL;DR:</strong> We don't collect, store, or transmit any of your personal data. Your API keys
                 are encrypted and stored only on your device. All AI conversations happen directly between your browser
                 and your chosen AI provider.
@@ -183,7 +62,7 @@
             <h2>2. Data Collection</h2>
             <h3>2.1 What We DON'T Collect</h3>
             <p>We want to be clear about what we don't do:</p>
-            <ul>
+            <ul style="list-style: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
                 <li><strong>No tracking or analytics:</strong> We do not use any analytics services, tracking pixels, or
                     telemetry.</li>
                 <li><strong>No user accounts:</strong> We don't require registration or collect any personal
@@ -197,7 +76,7 @@
 
             <h3>2.2 What Data Stays on Your Device</h3>
             <p>The following information is stored locally on your device using Chrome's storage API:</p>
-            <ul>
+            <ul style="list-style: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
                 <li><strong>API Keys:</strong> Encrypted API keys for AI providers (OpenAI, Anthropic, Google, Azure,
                     etc.)</li>
                 <li><strong>Configuration:</strong> Your model settings, assistant configurations, and preferences</li>
@@ -205,7 +84,9 @@
                     clear it anytime)</li>
                 <li><strong>Custom Assistants:</strong> Your custom assistant prompts and templates</li>
             </ul>
-            <p>All this data is stored using <code>chrome.storage.local</code> and never leaves your device.</p>
+            <p>All this data is stored using <code
+                    style="background: rgba(255,255,255,0.1); padding: 2px 4px; border-radius: 4px;">chrome.storage.local</code>
+                and never leaves your device.</p>
 
             <h2>3. API Key Security</h2>
             <h3>3.1 Encryption</h3>
@@ -226,7 +107,7 @@
                 Chat w WebPage acts as a client interface for third-party AI services. When you use the extension,
                 you're subject to the privacy policies of the AI providers you choose:
             </p>
-            <ul>
+            <ul style="list-style: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
                 <li><strong>OpenAI:</strong> <a href="https://openai.com/privacy/" target="_blank">OpenAI Privacy
                         Policy</a></li>
                 <li><strong>Anthropic:</strong> <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic
@@ -236,87 +117,37 @@
                 <li><strong>Microsoft (Azure):</strong> <a href="https://privacy.microsoft.com/"
                         target="_blank">Microsoft Privacy Statement</a></li>
             </ul>
-            <p>
-                We recommend reviewing these policies to understand how your conversations are handled by each provider.
-            </p>
 
             <h2>5. Permissions Explanation</h2>
             <p>Our extension requests the following Chrome permissions:</p>
-            <ul>
+            <ul style="list-style: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
                 <li><strong>storage:</strong> To save your settings and API keys locally on your device</li>
                 <li><strong>activeTab:</strong> To extract content from the webpage you're currently viewing</li>
                 <li><strong>sidePanel:</strong> To display the chat interface in Chrome's side panel</li>
                 <li><strong>tabs:</strong> To access webpage information for content extraction</li>
                 <li><strong>scripting:</strong> To inject content extraction scripts into webpages</li>
-                <li><strong>&lt;all_urls&gt;:</strong> To enable API calls to your chosen AI providers (OpenAI,
-                    Anthropic, Google, custom endpoints)</li>
+                <li><strong>&lt;all_urls&gt;:</strong> To enable API calls to your chosen AI providers</li>
             </ul>
-            <p>
-                These permissions are used solely for the extension's core functionality and not for tracking or data
-                collection.
-            </p>
 
             <h2>6. Data Retention</h2>
-            <p>
-                All data stored by the extension remains on your device until you:
-            </p>
-            <ul>
+            <p>All data stored by the extension remains on your device until you:</p>
+            <ul style="list-style: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
                 <li>Manually clear conversation history</li>
                 <li>Delete API configurations</li>
                 <li>Uninstall the extension</li>
                 <li>Clear Chrome's extension data</li>
             </ul>
-            <p>
-                Uninstalling the extension will automatically remove all locally stored data.
-            </p>
 
             <h2>7. Children's Privacy</h2>
             <p>
                 Our extension is not directed to children under 13. We do not knowingly collect information
-                from children. If you are a parent or guardian and believe your child has used this extension,
-                please note that no data is collected or transmitted to us.
+                from children.
             </p>
 
-            <h2>8. Transparency</h2>
-            <p>
-                Chat w WebPage values transparency. Our documentation and website code are available for review at:
-                <a href="https://github.com/FJVN/chat-w-webpage" target="_blank">GitHub Repository</a>
-            </p>
-
-            <h2>9. Changes to This Policy</h2>
-            <p>
-                We may update this Privacy Policy from time to time. Any changes will be posted on this page
-                with an updated "Last Updated" date. We encourage you to review this policy periodically.
-            </p>
-
-            <h2>10. Your Rights</h2>
-            <p>Since all data is stored locally on your device, you have complete control:</p>
-            <ul>
-                <li><strong>Access:</strong> You can view all stored data in the extension's settings</li>
-                <li><strong>Modify:</strong> You can edit or update any stored information</li>
-                <li><strong>Delete:</strong> You can clear all data at any time</li>
-                <li><strong>Export:</strong> You can export conversation history in various formats</li>
-            </ul>
-
-            <h2>11. Legal Compliance</h2>
-            <p>
-                This extension complies with:
-            </p>
-            <ul>
-                <li>General Data Protection Regulation (GDPR)</li>
-                <li>California Consumer Privacy Act (CCPA)</li>
-                <li>Chrome Web Store Developer Program Policies</li>
-            </ul>
-            <p>
-                Since we don't collect personal data, most data protection requirements don't apply to our service.
-            </p>
-
-            <div class="contact-section">
-                <h2>12. Contact Us</h2>
-                <p>
-                    If you have any questions about this Privacy Policy or our practices, please contact us:
-                </p>
-                <ul>
+            <h2>12. Contact Us</h2>
+            <div class="card" style="padding: 1.5rem; margin-top: 2rem;">
+                <p>If you have any questions about this Privacy Policy or our practices, please contact us:</p>
+                <ul style="list-style: none; margin-top: 1rem;">
                     <li><strong>Email:</strong> <a href="mailto:admin@haoba.cloud">admin@haoba.cloud</a></li>
                     <li><strong>GitHub Issues:</strong> <a href="https://github.com/FJVN/chat-w-webpage/issues"
                             target="_blank">Report an Issue</a></li>
@@ -324,6 +155,47 @@
             </div>
         </section>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Chat w WebPage</h4>
+                    <p style="font-size: 0.875rem;">Transform your web reading experience with world-class AI.</p>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">Product</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">Legal</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">Connect</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="https://github.com/FJVN/chat-w-webpage" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:admin@haoba.cloud">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 HaoBa Cloud. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>

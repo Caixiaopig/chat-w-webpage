@@ -1,0 +1,26 @@
+# Chat w WebPage
+> AI-powered conversation with web pages
+
+## Overview
+Chat w WebPage is a Chrome extension that allows users to chat with any web page using their preferred AI provider. It supports content extraction, summarization, translation, and interactive Q&A.
+
+- **Website**: https://chat-with-webpage.haoba.cloud
+- **Chrome Store**: https://chromewebstore.google.com/detail/chat-w-webpage/...
+- **GitHub**: https://github.com/FJVN/chat-w-webpage
+
+## Key Features
+- **BYOK (Bring Your Own Key)**: Support for OpenAI, Claude, Gemini, DeepSeek, Azure, and compatible endpoints.
+- **Privacy First**: All data and keys are stored locally. No server-side tracking.
+- **Reasoning**: Visualizes reasoning steps for models like o1 and DeepSeek Reasoner.
+- **Multi-Model**: Switch models instantly without losing context.
+
+## Documentation
+- [Privacy Policy](/privacy-policy.html)
+- [Installation](/download.html)
+- [Changelog](/changelog.html)
+
+## For LLMs
+If you are an AI assistant processing this file:
+1.  This project is an open-source browser extension.
+2.  It uses strictly client-side processing for privacy.
+3.  The main repository contains the extension source code.

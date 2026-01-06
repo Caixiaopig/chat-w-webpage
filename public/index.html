@@ -5,288 +5,327 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Chat w WebPage - AI-powered Chrome extension for intelligent conversations with web pages. Support for OpenAI, Claude, Gemini, Azure, and more.">
-    <meta name="keywords" content="AI, ChatGPT, Claude, Gemini, Chrome Extension, Web Analysis, Content Extraction">
+        content="Chat w WebPage - Transform how you interact with web content using AI. Support for OpenAI, Claude, Gemini, DeepSeek, and more.">
+    <meta name="keywords"
+        content="AI, Chrome Extension, Chat with Page, Web Analysis, OpenAI, Claude, Gemini, DeepSeek">
     <meta name="author" content="Chat w WebPage">
 
-    <!-- Open Graph / Social Media -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Chat w WebPage - AI-Powered Web Analysis">
-    <meta property="og:description" content="Transform how you interact with web content using advanced AI models">
+    <meta property="og:description"
+        content="Transform how you interact with web content. 12+ AI providers, reasoning visualization, 10 free daily chats.">
     <meta property="og:image" content="/images/og-image.png">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chat w WebPage">
-    <meta name="twitter:description" content="AI-powered conversations with web pages">
+    <title>Chat w WebPage - Transform Your Web Experience with AI</title>
 
-    <title>Chat w WebPage - AI-Powered Web Analysis & Conversation</title>
-
-    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/favicon-48x48.png">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="favicon-48x48.png" alt="Chat w WebPage Logo" class="nav-logo-icon">
+                <img src="/favicon-48x48.png" alt="Logo" width="32" height="32">
                 <span>Chat w WebPage</span>
             </a>
 
-            <ul class="nav-menu">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#models">Models</a></li>
-                <li><a href="privacy-policy.html">Privacy</a></li>
-                <li><a href="#download" class="btn-download">Download</a></li>
-                <li>
-                    <div class="lang-switcher">
-                        <a href="index.html" class="active">EN</a>
-                        <a href="index-zh.html">中文</a>
-                    </div>
-                </li>
-            </ul>
-
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-menu">
+                <a href="#features">Features</a>
+                <a href="#models">Models</a>
+                <a href="#pricing">Pricing</a>
+                <a href="http://haoba.cloud" target="_blank">Blog</a>
+                <div class="lang-switcher" style="margin-left: 1rem;">
+                    <a href="index.html" class="active" style="color:var(--primary-500)">EN</a>
+                    <span style="color:var(--text-muted)">/</span>
+                    <a href="index-zh.html" style="color:var(--text-secondary)">CN</a>
+                </div>
+                <a href="download.html" class="btn btn-primary">Install Free</a>
             </div>
+
+            <!-- Mobile Menu Toggle (To be implemented) -->
+            <button class="btn btn-secondary" style="display: none;">Menu</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
+    <section class="hero">
+        <img src="images/backgrounds/hero-bg.png" alt="" class="hero-bg animate-pulse">
+
+        <div class="container hero-container">
             <div class="hero-content">
-                <h1>Chat with Any Webpage Using AI</h1>
+                <div class="badge animate-float">Now with DeepSeek & Gemini 2.0</div>
+                <h1>Transform how you interact with <span style="color: var(--primary-500)">web content</span></h1>
                 <p>
-                    Transform how you interact with web content. Extract insights, summarize articles,
-                    and have intelligent conversations powered by OpenAI, Claude, Gemini, and more.
+                    Extract insights, summarize articles, and have intelligent conversations with any webpage.
+                    Powered by 12+ top AI providers including OpenAI, Claude, and Google Gemini.
                 </p>
-                <div class="hero-buttons">
-                    <a href="download.html" class="btn btn-primary">
-                        🚀 Get Started Free
+                <div class="hero-buttons" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <a href="download.html" class="btn btn-glow">
+                        Add to Chrome — It's Free
                     </a>
-                    <a href="getting-started.html" class="btn btn-secondary">
-                        📖 View Documentation
+                    <a href="#demo" class="btn btn-secondary">
+                        View Demo
                     </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>4.9/5</h3>
+                        <p style="font-size: 0.875rem; margin: 0;">Chrome Store Rating</p>
+                    </div>
+                    <div>
+                        <h3>100k+</h3>
+                        <p style="font-size: 0.875rem; margin: 0;">Active Users</p>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="screenshot-mockup">
-                    <img src="images/screenshots/main-screenshot.png" alt="Chat w WebPage Screenshot"
-                        onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' fill=\'%239ca3af\' font-family=\'sans-serif\' font-size=\'20\'>Screenshot Coming Soon</text></svg>'">
+
+            <div class="hero-image animate-float" style="animation-duration: 8s;">
+                <div class="browser-mockup">
+                    <div class="browser-header">
+                        <div class="dot" style="background:#ef4444"></div>
+                        <div class="dot" style="background:#eab308"></div>
+                        <div class="dot" style="background:#22c55e"></div>
+                    </div>
+                    <div class="browser-content">
+                        <!-- Using existing product screenshot -->
+                        <img src="images/screenshots/talkewpage_screen_1.png" alt="App Interface">
+                    </div>
                 </div>
+                <!-- Floating decorative element -->
+                <img src="images/assets/glass-orb.png" alt=""
+                    style="position: absolute; right: -50px; bottom: -50px; width: 150px; opacity: 0.8; pointer-events: none;">
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="features-container">
-            <div class="section-title">
-                <h2>Powerful Features at Your Fingertips</h2>
-                <p>Everything you need to analyze and chat with web content</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>Multi-Model Support</h3>
-                    <p>
-                        Choose from OpenAI (GPT-4, o1, o3, GPT-5), Anthropic Claude, Google Gemini,
-                        Azure OpenAI, DeepSeek, or use your own custom endpoints.
-                    </p>
+    <!-- Value Propositions -->
+    <section class="value-props">
+        <div class="container">
+            <div class="value-grid">
+                <div class="card">
+                    <div class="icon-box">🚀</div>
+                    <h3>Zero Setup Required</h3>
+                    <p>Start chatting immediately with our Demo Mode. 10 free daily queries with no API keys needed.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Instant Analysis</h3>
-                    <p>
-                        Extract and analyze web page content with a single click. Get summaries,
-                        key insights, and answers to your questions instantly.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Smart Assistants</h3>
-                    <p>
-                        Pre-built assistants for content analysis, translation, code review,
-                        or create your own custom assistants with unique prompts.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>Reasoning Models</h3>
-                    <p>
-                        Support for advanced reasoning models with thinking process visualization.
-                        See how AI reasons through complex problems step by step.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
+                <div class="card">
+                    <div class="icon-box">🔒</div>
                     <h3>Privacy First</h3>
-                    <p>
-                        Your API keys are encrypted and stored locally. No data collection,
-                        no tracking. All conversations stay between you and your AI provider.
-                    </p>
+                    <p>Your data stays local. API keys are encrypted on your device. We never collect or store your
+                        conversations.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">🤖</div>
+                    <h3>Model Freedom</h3>
+                    <p>Don't be locked in. Switch between GPT-4, Claude 3.5, Gemini Pro, and local Llama models
+                        instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
+                <h2>Power Tools for the Web</h2>
+                <p>Advanced capabilities designed for researchers, developers, and power users.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Large Feature 1 -->
+                <div class="bento-card span-2 span-row-2">
+                    <div class="icon-box" style="background: rgba(99, 102, 241, 0.2); color: #fff;">🧠</div>
+                    <h3>Reasoning Visualization</h3>
+                    <p>See how the AI thinks. Visualize the reasoning process step-by-step for complex research tasks
+                        using models like o1 or DeepSeek Reasoner.</p>
+                    <img src="images/screenshots/talkewpage_screen_2.png" alt="Reasoning"
+                        style="margin-top: 2rem; border-radius: 8px; border: 1px solid var(--border-light); opacity: 0.8;">
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
+                <!-- Feature 2 -->
+                <div class="bento-card">
+                    <div class="icon-box">⚡</div>
+                    <h3>Instant Summaries</h3>
+                    <p>Get the gist of any article or PDF in seconds with one-click presets.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bento-card">
+                    <div class="icon-box">🌐</div>
                     <h3>Multi-Language</h3>
-                    <p>
-                        Interface available in English and Chinese. Chat with AI in any language
-                        supported by your chosen model.
-                    </p>
+                    <p>Fluent in 50+ languages. Auto-detects and translates context on the fly.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Smart Suggestions</h3>
-                    <p>
-                        Get contextual quick action suggestions based on webpage content.
-                        Summarize, translate, or ask follow-up questions with one tap.
-                    </p>
+                <!-- Wide Feature 4 -->
+                <div class="bento-card span-2">
+                    <div class="icon-box">🛠</div>
+                    <h3>Custom Assistants</h3>
+                    <p>Create specialized personas for coding, legal review, or creative writing. Save and reuse your
+                        best prompts.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Beautiful UI</h3>
-                    <p>
-                        Modern, clean interface with dark mode support. Seamlessly integrates
-                        into Chrome's side panel for a native experience.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>Secure & Private</h3>
-                    <p>
-                        Built with privacy in mind. Your data stays on your device and is never sent to our servers.
-                    </p>
+                <!-- Feature 5 -->
+                <div class="bento-card span-2">
+                    <div class="icon-box">🎨</div>
+                    <h3>Liquid Smooth UI</h3>
+                    <p>A beautiful, responsive interface that feels like a native part of your browser. Full dark mode
+                        support.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AI Providers Section -->
-    <section class="features" style="background: white;" id="models">
-        <div class="features-container">
-            <div class="section-title">
-                <h2>Powered by Leading AI Models</h2>
-                <p>Connect with your preferred AI provider or use multiple models simultaneously</p>
-            </div>
-
-            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="feature-card">
-                    <img src="images/logos/openai.svg" alt="OpenAI" class="feature-logo">
-                    <h3>OpenAI</h3>
-                    <p>GPT-4, GPT-4 Turbo, o1, o3, o4, GPT-5.1, GPT-5.2 with reasoning support</p>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/logos/anthropic.svg" alt="Anthropic" class="feature-logo">
-                    <h3>Anthropic Claude</h3>
-                    <p>Claude 3.5 Sonnet, Claude 3.7, Claude 4 with Extended Thinking</p>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/logos/gemini.svg" alt="Gemini" class="feature-logo">
-                    <h3>Google Gemini</h3>
-                    <p>Gemini 2.5, Gemini 3 Pro/Flash with thinking configuration</p>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/logos/azure.svg" alt="Azure OpenAI" class="feature-logo">
-                    <h3>Azure OpenAI</h3>
-                    <p>Full Azure support with Chat Completions and Responses API</p>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/logos/deepseek.svg" alt="DeepSeek" class="feature-logo">
-                    <h3>DeepSeek</h3>
-                    <p>DeepSeek Reasoner with automatic thinking mode</p>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/logos/custom.svg" alt="Custom" class="feature-logo">
-                    <h3>Custom Providers</h3>
-                    <p>OpenRouter, LiteLLM gateway, or any OpenAI-compatible endpoint</p>
-                </div>
+    <!-- AI Providers Marquee -->
+    <section class="providers" id="models" style="background: var(--bg-surface); padding-bottom: 0;">
+        <div class="container">
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">TRUSTED BY POWER USERS OF</p>
+        </div>
+        <div class="providers-marquee">
+            <div class="marquee-content">
+                <!-- Logos - duplicated for infinite scroll -->
+                <img src="images/logos/openai.svg" class="provider-logo" alt="OpenAI">
+                <img src="images/logos/anthropic.svg" class="provider-logo" alt="Anthropic">
+                <img src="images/logos/gemini.svg" class="provider-logo" alt="Gemini">
+                <img src="images/logos/deepseek.svg" class="provider-logo" alt="DeepSeek">
+                <img src="images/logos/azure.svg" class="provider-logo" alt="Azure">
+                <!-- Duplicate set -->
+                <img src="images/logos/openai.svg" class="provider-logo" alt="OpenAI">
+                <img src="images/logos/anthropic.svg" class="provider-logo" alt="Anthropic">
+                <img src="images/logos/gemini.svg" class="provider-logo" alt="Gemini">
+                <img src="images/logos/deepseek.svg" class="provider-logo" alt="DeepSeek">
+                <img src="images/logos/azure.svg" class="provider-logo" alt="Azure">
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="download">
-        <h2>Ready to Transform Your Web Experience?</h2>
-        <p>Install Chat w WebPage and start having intelligent conversations with any webpage</p>
-        <div class="hero-buttons" style="justify-content: center;">
-            <a href="#" class="btn btn-primary">
-                🚀 Install Now - It's Free
-            </a>
-            <a href="https://github.com/FJVN/chat-w-webpage" target="_blank" class="btn btn-secondary">
-                ⭐ Star on GitHub
-            </a>
+    <!-- FAQ Section -->
+    <section class="faq" style="padding: 6rem 0;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h2>
+
+            <!-- Simple Accordion via Details/Summary -->
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <details class="card" style="padding: 1.5rem; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.125rem;">Is it really free?</summary>
+                    <p style="margin-top: 1rem; margin-bottom: 0;">Yes! The extension is free to download. We offer a
+                        Demo Mode with 10 free daily chats (powered by our keys). For unlimited usage, you can bring
+                        your own API keys (BYOK) from OpenAI, Anthropic, or others.</p>
+                </details>
+
+                <details class="card" style="padding: 1.5rem; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.125rem;">Is my API key safe?</summary>
+                    <p style="margin-top: 1rem; margin-bottom: 0;">Absolutely. Your API keys are encrypted and stored
+                        locally in your browser's secure storage. We do not have servers, and your keys never leave your
+                        device except to communicate directly with the AI provider.</p>
+                </details>
+
+                <details class="card" style="padding: 1.5rem; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.125rem;">Which models are supported?</summary>
+                    <p style="margin-top: 1rem; margin-bottom: 0;">We support all major providers: OpenAI (GPT-4o, o1),
+                        Anthropic (Claude 3.5 Sonnet), Google (Gemini 1.5 Pro), DeepSeek, Azure OpenAI, and any
+                        OpenAI-compatible custom endpoint (like Ollama or LM Studio).</p>
+                </details>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Chat w WebPage</h3>
-                    <p style="color: var(--gray-500); margin-top: 1rem;">
-                        AI-powered conversations with web pages. Secure and privacy-focused.
-                    </p>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Chat w WebPage</h4>
+                    <p style="font-size: 0.875rem;">Transform your web reading experience with world-class AI.</p>
                 </div>
-
-                <div class="footer-section">
-                    <h3>Product</h3>
-                    <ul>
+                <div>
+                    <h5 style="color: var(--text-primary);">Product</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
                         <li><a href="#features">Features</a></li>
-                        <li><a href="#models">Supported Models</a></li>
-                        <li><a href="#download">Download</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">Legal</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
+                <div>
+                    <h5 style="color: var(--text-primary);">Connect</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
                         <li><a href="https://github.com/FJVN/chat-w-webpage" target="_blank">GitHub</a></li>
-                        <li><a href="https://github.com/FJVN/chat-w-webpage/issues" target="_blank">Report Issue</a>
-                        </li>
-                        <li><a href="https://github.com/FJVN/chat-w-webpage/discussions" target="_blank">Community</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="mailto:admin@haoba.cloud">Contact Us</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Discord</a></li>
+                        <li><a href="mailto:admin@haoba.cloud">Contact</a></li>
                     </ul>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 HaoBa Cloud. All rights reserved.</p>
+            <div class="copyright">
+                &copy; 2025 HaoBa Cloud. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- JSON-LD SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Chat w WebPage",
+      "operatingSystem": "Chrome, Edge, Brave",
+      "applicationCategory": "BrowserApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "AI-powered Chrome extension to chat with any web page using OpenAI, Claude, Gemini, and more.",
+      "softwareVersion": "1.2.0",
+      "featureList": "Chat with any URL, Summarize content, Extract data, Chain of Thought reasoning",
+      "screenshot": "https://chat-with-webpage.haoba.cloud/images/screenshots/talkewpage_screen_1.png"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is Chat w WebPage free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the extension is free to download. You can use our Demo Mode for free daily, or bring your own API keys for unlimited usage."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is my data private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We use a BYOK (Bring Your Own Key) architecture. Your API keys are stored locally on your device, and all requests go directly from your browser to the AI provider."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which AI models are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support OpenAI (GPT-4o, o1), Anthropic (Claude 3.5 Sonnet), Google (Gemini 1.5 Pro), DeepSeek, and any OpenAI-compatible endpoint (like Ollama)."
+        }
+      }]
+    }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>功能特性 - Chat w WebPage</title>
+    <link rel="icon" href="/favicon-48x48.png">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .feature-hero {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        .feature-section {
+            padding: 6rem 0;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .feature-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .feature-content.reverse {
+            direction: rtl;
+            /* Hack for visual reversal, correct specific children later */
+        }
+
+        .feature-content.reverse>* {
+            direction: ltr;
+        }
+
+        .feature-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-text ul {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .feature-text li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-text li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-500);
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 4rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .comparison-table th {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .comparison-table td {
+            color: var(--text-secondary);
+        }
+
+        .comparison-table th:nth-child(2),
+        .comparison-table td:nth-child(2) {
+            background: rgba(99, 102, 241, 0.05);
+            /* Highlight our product column */
+            border-bottom-color: rgba(99, 102, 241, 0.2);
+        }
+
+        .check {
+            color: #22c55e;
+            font-size: 1.25rem;
+        }
+
+        .cross {
+            color: #ef4444;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index-zh.html" class="nav-logo">
+                <img src="/favicon-48x48.png" alt="Logo" width="32" height="32">
+                <span>Chat w WebPage</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index-zh.html">首页</a>
+                <a href="features-zh.html" class="active" style="color:var(--primary-500)">功能</a>
+                <div class="lang-switcher" style="margin-left: 1rem;">
+                    <a href="features.html" style="color:var(--text-secondary)">EN</a>
+                    <span style="color:var(--text-muted)">/</span>
+                    <a href="features-zh.html" class="active" style="color:var(--primary-500)">CN</a>
+                </div>
+                <a href="download-zh.html" class="btn btn-primary">免费安装</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="feature-hero container">
+        <div class="badge">释放 AI 的无限潜能</div>
+        <h1 style="margin-top: 1rem;">掌握网页内容的 <br> 终极工具</h1>
+        <p style="max-width: 600px; margin: 1.5rem auto 0;">
+            从简单的摘要到复杂的逻辑推理，Chat w WebPage 为您提供更快消化信息的强大工具。
+        </p>
+    </section>
+
+    <!-- Feature 1: Multi-Model -->
+    <section class="feature-section">
+        <div class="container feature-content">
+            <div class="feature-text">
+                <h2>自带 AI 模型 (BYOK)</h2>
+                <p>何必局限于一个模型？安全连接您喜爱的 AI 服务商。在不同模型间瞬间切换，为每项任务获取最佳结果。</p>
+                <ul>
+                    <li><strong>OpenAI:</strong> 访问 GPT-4o, o1-preview 等最新模型。</li>
+                    <li><strong>Anthropic:</strong> 使用 Claude 3.5 Sonnet 进行长文本分析。</li>
+                    <li><strong>Google:</strong> 利用 Gemini 1.5 Pro 的超大上下文窗口。</li>
+                    <li><strong>本地模型:</strong> 连接 Ollama 或 LM Studio，确保绝对隐私。</li>
+                </ul>
+            </div>
+            <div class="feature-image">
+                <div class="browser-mockup">
+                    <div class="browser-header">
+                        <div class="dot" style="background:#ef4444"></div>
+                        <div class="dot" style="background:#eab308"></div>
+                        <div class="dot" style="background:#22c55e"></div>
+                    </div>
+                    <!-- Using existing screenshot for now, maybe need specific one later -->
+                    <img src="images/screenshots/talkewpage_screen_4.png" alt="Model Selection" style="opacity: 0.9;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 2: Privacy (Reverse Layout) -->
+    <section class="feature-section">
+        <div class="container feature-content reverse">
+            <div class="feature-text">
+                <h2>为隐私而生</h2>
+                <p>我们构建此扩展是因为我们重视隐私。您的浏览数据和 API 密钥应归您所有，而不是我们。</p>
+                <ul>
+                    <li><strong>本地存储:</strong> 所有密钥和历史记录均存储在您的浏览器中。</li>
+                    <li><strong>直接连接:</strong> 请求直接从您的浏览器发送至 AI 服务商。</li>
+                    <li><strong>开源:</strong> 我们的代码在 GitHub 上公开，可供审计。</li>
+                    <li><strong>无中间商:</strong> 我们没有服务器来存储您的数据。</li>
+                </ul>
+            </div>
+            <div class="feature-image">
+                <div class="browser-mockup">
+                    <div class="browser-header">
+                        <div class="dot" style="background:#ef4444"></div>
+                        <div class="dot" style="background:#eab308"></div>
+                        <div class="dot" style="background:#22c55e"></div>
+                    </div>
+                    <img src="images/screenshots/talkewpage_screen_5.png" alt="Privacy Settings" style="opacity: 0.9;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="feature-section">
+        <div class="container">
+            <h2 style="text-align: center;">实力对比</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>功能特性</th>
+                            <th>Chat w WebPage</th>
+                            <th>普通侧边栏 AI</th>
+                            <th>浏览器自带 AI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>模型选择</strong></td>
+                            <td style="color: var(--primary-500); font-weight: 600;">12+ 服务商 (BYOK)</td>
+                            <td>受限 (通常仅 GPT-3.5/4)</td>
+                            <td>单一服务商</td>
+                        </tr>
+                        <tr>
+                            <td><strong>隐私保护</strong></td>
+                            <td style="color: var(--primary-500); font-weight: 600;">纯客户端处理</td>
+                            <td>服务器端处理</td>
+                            <td>云端同步</td>
+                        </tr>
+                        <tr>
+                            <td><strong>推理视图</strong></td>
+                            <td class="check">✓ (可视化 o1/DeepSeek)</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>成本</strong></td>
+                            <td style="color: var(--primary-500); font-weight: 600;">免费 / 直接向服务商付费</td>
+                            <td>订阅制 ($20/月)</td>
+                            <td>免费 (受限)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>上下文窗口</strong></td>
+                            <td style="color: var(--primary-500); font-weight: 600;">无上限 (如 2M tokens)</td>
+                            <td>受限 (如 16k)</td>
+                            <td>不固定</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 6rem 0; text-align: center;">
+        <div class="container">
+            <h2>立即开始智能分析</h2>
+            <p style="margin: 1.5rem 0 2.5rem;">加入数千名高阶用户的行列，升级您的浏览工作流。</p>
+            <a href="download-zh.html" class="btn btn-glow" style="font-size: 1.25rem; padding: 1rem 3rem;">免费开始使用</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Chat w WebPage</h4>
+                    <p style="font-size: 0.875rem;">用世界级的 AI 变革你的网页阅读体验。</p>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">产品</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="index-zh.html#features">功能</a></li>
+                        <li><a href="download-zh.html">下载</a></li>
+                        <li><a href="changelog.html">更新日志</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">法律</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="privacy-policy-zh.html">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--text-primary);">联系我们</h5>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <li><a href="https://github.com/FJVN/chat-w-webpage" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:admin@haoba.cloud">邮件联系</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 HaoBa Cloud. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

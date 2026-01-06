@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chat-with-webpage.haoba.cloud/sitemap.xml
