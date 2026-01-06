@@ -4,7 +4,7 @@
 
 Chat w WebPage is a powerful Chrome extension that allows you to summarize, analyze, and chat with any webpage content using your preferred AI models. Unlike other tools, we prioritize your freedom and privacy.
 
-![Chat w WebPage Screenshot](public/images/posters/poster_abstract_6.jpeg)
+![Chat w WebPage Screenshot](public/images/posters/poster_abstract_3.jpeg)
 
 ## ✨ Key Features
 
@@ -36,6 +36,10 @@ Watch the AI think. Uniquely designed to visualize the step-by-step reasoning pr
 The extension is **free to use**. You only pay the AI providers for the models you choose to use.
 
 [**Download for Chrome**](#) (Coming Soon)
+
+## 🐛 Feedback & Support
+
+If you encounter any bugs or have feature requests, please [submit an issue](https://github.com/Caixiaopig/chat-w-webpage/issues) in this repository.
 
 ---
 
