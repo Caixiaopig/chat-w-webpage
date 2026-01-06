@@ -296,73 +296,44 @@
 /* Logo Cloud / Trust Section */
 .providers {
     position: relative;
-    overflow: hidden;
-    padding: 3rem 0;
+    padding: 4rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     background: rgba(2, 6, 23, 0.5);
-    /* Semi-transparent void */
 }
 
-.trust-label {
+.trust-title {
     text-align: center;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-    position: relative;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    /* H2 size */
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+}
+
+.providers-grid {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 1rem;
-}
-
-.trust-label::before,
-.trust-label::after {
-    content: '';
-    height: 1px;
-    width: 40px;
-    background: linear-gradient(90deg, transparent, var(--border-light), transparent);
-}
-
-.providers-marquee {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-}
-
-.marquee-content {
-    display: flex;
-    gap: 4rem;
-    animation: marquee 40s linear infinite;
-    min-width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem 5rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .provider-logo {
-    height: 28px;
+    height: 48px;
+    /* Significantly larger */
     width: auto;
     object-fit: contain;
-    opacity: 0.4;
+    opacity: 0.5;
     filter: grayscale(100%) brightness(100);
-    /* Force white */
     transition: all 0.3s ease;
 }
 
 .provider-logo:hover {
     opacity: 1;
-    filter: grayscale(100%) brightness(100) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
-}
-
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
+    transform: scale(1.05);
+    filter: grayscale(0%) brightness(100) drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
 }
