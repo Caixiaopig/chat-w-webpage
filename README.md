@@ -10,10 +10,10 @@ Chat w WebPage is a powerful Chrome extension that allows you to summarize, anal
 
 ### 🤖 Support 10+ Top-tier Models (BYOK)
 Don't be locked into a single provider. We support all major AI models directly. Bring Your Own Key (BYOK) for maximum flexibility and cost control.
-*   **OpenAI**: GPT-4o, o1-preview
-*   **Anthropic**: Claude 3.5 Sonnet
-*   **Google**: Gemini 1.5 Pro
-*   **DeepSeek**: V3, R1 (Reasoning)
+*   **OpenAI**: GPT-5.2, o1
+*   **Anthropic**: Claude 4.5 Sonnet
+*   **Google**: Gemini 3.0 Pro
+*   **DeepSeek**: V3, Reasoner
 *   **Local Models**: Ollama, LM Studio (via local server)
 *   ...and many more via Azure, Grok, OpenRouter, and SiliconFlow.
 
@@ -43,28 +43,4 @@ If you encounter any bugs or have feature requests, please [submit an issue](htt
 
 ---
 
-## 🛠️ Website Development
-
-This repository hosts the official website source code for Chat w WebPage.
-
-### Directory Structure
-
-- **`public/`**: The deployment-ready website source code.
-  - `index.html`: Main landing page (English).
-  - `index-zh.html`: Main landing page (Chinese).
-  - `css/`, `images/`: Static assets.
-- **`dev-docs/`**: Technical documentation and architecture designs.
-
-### Deployment (Cloudflare Pages)
-
-This project is optimized for deployment on **Cloudflare Pages**.
-
-1. **Connect to Git**: Link this repository in Cloudflare Pages.
-2. **Build Settings**:
-   - **Framework preset**: `None`
-   - **Build command**: (Leave empty)
-   - **Build output directory**: `public`
-3. **Deploy**: Save and deploy.
-
----
 &copy; 2026 HaoBa Cloud. All rights reserved.
