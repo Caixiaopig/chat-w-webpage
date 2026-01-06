@@ -41,8 +41,18 @@
     gap: 2rem;
 }
 
+.nav-menu a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: var(--text-primary);
+}
+
 .nav-menu a.active {
-    color: var(--primary-500);
+    color: var(--accent-cyan);
 }
 
 /* Hero Section */
