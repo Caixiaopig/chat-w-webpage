@@ -307,8 +307,7 @@
 
 .trust-title {
     text-align: center;
-    font-size: clamp(1.5rem, 4vw, 2.25rem);
-    /* H2 size */
+    /* Removed specific font-size to inherit default H2 or match specific override if needed */
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 3rem;
