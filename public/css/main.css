@@ -33,6 +33,12 @@
     font-weight: 700;
     font-size: 1.25rem;
     color: var(--text-primary);
+    transition: color 0.2s;
+}
+
+.nav-logo:hover {
+    color: var(--text-primary);
+    text-decoration: none;
 }
 
 .nav-menu {
