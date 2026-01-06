@@ -300,6 +300,8 @@
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     background: rgba(2, 6, 23, 0.5);
+    scroll-margin-top: 5rem;
+    /* Fix navbar overlap */
 }
 
 .trust-title {
@@ -320,6 +322,8 @@
     gap: 3rem 5rem;
     max-width: 1000px;
     margin: 0 auto;
+    width: 100%;
+    /* Ensure full width for centering */
 }
 
 .provider-logo {
