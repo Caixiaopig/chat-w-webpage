@@ -27,7 +27,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Agent Configuration
-.agent/
+
 .gemini/
 .claude/
 .shared/
