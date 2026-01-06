@@ -288,6 +288,14 @@
     .bento-grid,
     .pricing-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        /* Reset rows */
+    }
+
+    .span-2,
+    .span-row-2 {
+        grid-column: auto;
+        grid-row: auto;
     }
 
     .footer-grid {
