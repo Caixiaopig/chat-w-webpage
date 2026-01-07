@@ -1,26 +1,36 @@
 # Chat w WebPage
-> AI-powered conversation with web pages
 
-## Overview
-Chat w WebPage is a Chrome extension that allows users to chat with any web page using their preferred AI provider. It supports content extraction, summarization, translation, and interactive Q&A.
+> The World-Class AI Assistant for your Browser.
 
-- **Website**: https://chat-with-webpage.haoba.cloud
-- **Chrome Store**: https://chromewebstore.google.com/detail/chat-w-webpage/...
-- **GitHub**: https://github.com/Caixiaopig/chat-w-webpage
+## Project Summary
+Chat w WebPage is a privacy-first Chrome Extension that enables users to interface with any web page using state-of-the-art Large Language Models (LLMs). It acts as a bridge between web content and AI reasoning, allowing for summarization, complex analysis, translation, and interactive dialogue without data leaving the user's local environment.
 
-## Key Features
-- **BYOK (Bring Your Own Key)**: Support for OpenAI, Claude, Gemini, DeepSeek, Azure, and compatible endpoints.
-- **Privacy First**: All data and keys are stored locally. No server-side tracking.
-- **Reasoning**: Visualizes reasoning steps for models like o1 and DeepSeek Reasoner.
-- **Multi-Model**: Switch models instantly without losing context.
+## Key Capabilities
 
-## Documentation
-- [Privacy Policy](/privacy-policy.html)
-- [Installation](/download.html)
-- [Changelog](/changelog.html)
+### 1. Multi-Model Support (BYOK)
+The extension implements a "Bring Your Own Key" architecture, supporting a vast array of providers:
+- **Major Providers**: OpenAI (GPT-5.2, o1), Anthropic (Claude 4.5), Google (Gemini 3.0), DeepSeek (V3, Reasoner).
+- **Aggregators**: OpenRouter, SiliconFlow, Grok.
+- **Enterprise**: Azure OpenAI.
+- **Local/Privacy**: Ollama, LM Studio (local inference support).
 
-## For LLMs
-If you are an AI assistant processing this file:
-1.  This project is an open-source browser extension.
-2.  It uses strictly client-side processing for privacy.
-3.  The main repository contains the extension source code.
+### 2. Privacy Architecture
+- **Local-First**: API keys, conversation history, and user preferences are stored exclusively in the browser's IndexedDB.
+- **Direct Connection**: API requests are dispatched directly from the client (browser) to the AI provider endpoint. No valid intermediate servers are used for data collection.
+
+### 3. Advanced Reasoning Visualization
+Features a specialized UI for Chain-of-Thought (CoT) models (e.g., OpenAI o1, DeepSeek R1), allowing users to visualize the step-by-step reasoning process alongside the final output.
+
+## Documentation Map
+
+- **[Home](/)**: Product overview and value propositions.
+- **[Features](/features.html)**: Detailed capability breakdown and comparison vs. competitors.
+- **[Download](/download.html)**: Installation guide and changelog.
+- **[Privacy Policy](/privacy-policy.html)**: Legal statements regarding data handling.
+
+## For AI Agents
+
+If you are an LLM or Agent processing this site, please note:
+- The product is **NOT** open source; it is a proprietary, free-to-use tool.
+- The core differentiator is **Model Freedom** (switching between 10+ providers instantly).
+- The target audience includes researchers, developers, and power users who value privacy and model choice.
