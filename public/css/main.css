@@ -9,8 +9,7 @@
     z-index: 1000;
     padding: 1rem 0;
     transition: var(--transition-base);
-    background: rgba(15, 23, 42, 0.5);
-    /* Semi-transparent */
+    background: var(--navbar-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-light);
 }
@@ -71,7 +70,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, var(--bg-void) 50%);
+    background: radial-gradient(circle at 50% 0%, var(--hero-gradient-start) 0%, var(--bg-void) 50%);
 }
 
 .hero-bg {
@@ -82,8 +81,15 @@
     height: 100%;
     z-index: 0;
     opacity: 0.6;
-    object-fit: cover;
     pointer-events: none;
+    background-image: var(--hero-bg-image);
+    background-size: cover;
+    background-position: center;
+}
+
+:root.light .hero-bg {
+    opacity: 0.15;
+    filter: brightness(0.8);
 }
 
 .hero-container {
@@ -99,7 +105,7 @@
     font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #fff, #94a3b8);
+    background: var(--hero-title-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -115,20 +121,20 @@
 
 /* Browser Mockup Frame */
 .browser-mockup {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--browser-mockup-bg);
+    border: 1px solid var(--border-light);
     border-radius: 12px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-md);
     overflow: hidden;
     position: relative;
 }
 
 .browser-header {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--browser-header-bg);
     padding: 0.75rem 1rem;
     display: flex;
     gap: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--browser-header-border);
 }
 
 .dot {
@@ -229,7 +235,7 @@
 
 /* Footer */
 .footer {
-    background: #020617;
+    background: var(--footer-bg);
     border-top: 1px solid var(--border-light);
     padding: 4rem 0 2rem;
     margin-top: 4rem;
@@ -244,18 +250,22 @@
 
 .copyright {
     text-align: center;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     padding-top: 2rem;
     border-top: 1px solid var(--border-light);
 }
 
 .footer a {
     color: var(--text-secondary);
-    transition: color 0.2s;
+    transition: color 0.2s, text-decoration-color 0.2s;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
 }
 
 .footer a:hover {
-    color: var(--primary-400);
+    color: var(--primary-500);
+    text-decoration-color: var(--primary-500);
 }
 
 /* Responsive */
@@ -281,6 +291,10 @@
 
     /* Mobile menu implementation needed */
 
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
     .value-grid {
         grid-template-columns: 1fr;
     }
@@ -292,6 +306,11 @@
         /* Reset rows */
     }
 
+    .bento-card,
+    .card {
+        padding: 1.5rem;
+    }
+
     .span-2,
     .span-row-2 {
         grid-column: auto;
@@ -300,7 +319,12 @@
 
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
+}
+
+.theme-toggle:hover {
+    color: var(--primary-500) !important;
 }
 
 /* Pricing Grid Layout */
@@ -314,9 +338,9 @@
 .providers {
     position: relative;
     padding: 4rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    background: rgba(2, 6, 23, 0.5);
+    border-top: 1px solid var(--providers-border);
+    border-bottom: 1px solid var(--providers-border);
+    background: var(--providers-bg);
     scroll-margin-top: 5rem;
     /* Fix navbar overlap */
 }
@@ -368,18 +392,32 @@
 
 .provider-logo {
     height: 48px;
-    /* Significantly larger */
     width: auto;
     object-fit: contain;
     opacity: 0.5;
-    /* Force all logos to be flat white (Black -> Brightness 0 -> Invert -> White) */
-    filter: brightness(0) invert(1);
+    filter: var(--provider-logo-filter);
     transition: all 0.3s ease;
 }
 
 .provider-item:hover .provider-logo {
     opacity: 1;
     transform: scale(1.05);
-    /* Keep white and add strong glow */
-    filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    filter: var(--provider-logo-filter) drop-shadow(0 0 8px var(--text-muted));
+}
+
+/* Theme-specific logos */
+.logo-light {
+    display: none;
+}
+
+.logo-dark {
+    display: block;
+}
+
+:root.light .logo-light {
+    display: block;
+}
+
+:root.light .logo-dark {
+    display: none;
 }

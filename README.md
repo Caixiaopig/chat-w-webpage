@@ -8,12 +8,12 @@ Chat w WebPage is a powerful Chrome extension that allows you to summarize, anal
 
 ## ✨ Key Features
 
-### 🤖 Support 10+ Top-tier Models (BYOK)
+### 🤖 Support 12+ Top-tier Models (BYOK)
 Don't be locked into a single provider. We support all major AI models directly. Bring Your Own Key (BYOK) for maximum flexibility and cost control.
-*   **OpenAI**: GPT-5.2
-*   **Anthropic**: Claude 4.5 Sonnet
-*   **Google**: Gemini 3.0 Pro
-*   **DeepSeek**: DeepSeek V3.2
+*   **OpenAI**: GPT-4o, o1
+*   **Anthropic**: Claude 3.5 Sonnet
+*   **Google**: Gemini 1.5 Pro
+*   **DeepSeek**: DeepSeek V3, R1
 *   **Local Models**: Ollama, LM Studio (via local server)
 *   ...and many more via Azure, Grok, OpenRouter, and SiliconFlow.
 
@@ -35,7 +35,7 @@ Watch the AI think. Uniquely designed to visualize the step-by-step reasoning pr
 
 The extension is **free to use**. You only pay the AI providers for the models you choose to use.
 
-[**Download for Chrome**](#) (Coming Soon)
+[**Download for Chrome**](https://chat-with-webpage.haoba.cloud/download.html)
 
 ## 🐛 Feedback & Support
 

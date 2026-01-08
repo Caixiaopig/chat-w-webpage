@@ -7,6 +7,9 @@
     <title>更新日志 - Chat w WebPage</title>
     <link rel="icon" href="/favicon-48x48.png">
 
+    <!-- Theme Script -->
+    <script src="js/theme.js"></script>
+
     <!-- Design System -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -109,12 +112,42 @@
 
             <div class="nav-menu">
                 <a href="index-zh.html">首页</a>
-                <a href="features-zh.html">功能</a>
+                <a href="index-zh.html#features">功能</a>
+                <a href="index-zh.html#pricing">定价</a>
                 <div class="lang-switcher" style="margin-left: 1rem;">
                     <a href="changelog.html" style="color:var(--text-secondary)">EN</a>
                     <span style="color:var(--text-muted)">/</span>
                     <a href="changelog-zh.html" class="active" style="color:var(--primary-500)">CN</a>
                 </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"
+                    style="background: none; border: none; cursor: pointer; color: var(--text-secondary); padding: 0.5rem; display: flex; align-items: center; justify-content: center; transition: color 0.2s;"
+                    title="点击切换：深色 → 浅色 → 跟随系统">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="icon-system" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </button>
                 <a href="download-zh.html" class="btn btn-primary">免费安装</a>
             </div>
         </div>
@@ -131,49 +164,37 @@
     <!-- Timeline -->
     <div class="container timeline">
 
-        <!-- v1.2.0 -->
+        <!-- v1.1.0 -->
         <div class="release">
             <div>
-                <span class="version-tag">v1.2.0</span>
-                <span class="release-date">2026年1月5日</span>
-                <span class="badge-new">最新</span>
+                <span class="version-tag">v1.1.0</span>
+                <span class="release-date">即将推出</span>
+                <span class="badge-new">即将推出</span>
             </div>
-            <h2>推理与模型更新</h2>
+            <h2>订阅模式与改进</h2>
             <ul>
-                <li><strong>新增:</strong> 添加对 DeepSeek Reasoner 和 Gemini 2.0 Flash 思考模型的支持。</li>
-                <li><strong>新增:</strong> 可视化兼容模型的推理步骤（点击展开思维链）。</li>
+                <li><strong>新增:</strong> 订阅模式，降低用户使用门槛。</li>
                 <li><strong>改进:</strong> 增强了数学公式 (LaTeX) 的 Markdown 渲染效果。</li>
                 <li><strong>修复:</strong> 解决了部分自定义 API 端点无法正确保存的问题。</li>
             </ul>
         </div>
 
-        <!-- v1.1.0 -->
-        <div class="release">
-            <div>
-                <span class="version-tag">v1.1.0</span>
-                <span class="release-date">2025年12月20日</span>
-            </div>
-            <h2>自定义助手与预设</h2>
-            <ul>
-                <li><strong>新增:</strong> 创建并保存带有特定系统提示词的自定义助手。</li>
-                <li><strong>新增:</strong> 添加"一键总结"预设，便于快速阅读。</li>
-                <li><strong>改进:</strong> 通过 Ollama (localhost:11434) 支持本地模型。</li>
-                <li><strong>界面:</strong> 深色模式现已成为默认体验。</li>
-            </ul>
-        </div>
 
         <!-- v1.0.0 -->
         <div class="release">
             <div>
                 <span class="version-tag">v1.0.0</span>
-                <span class="release-date">2025年12月1日</span>
+                <span class="release-date">2026年1月9日</span>
+                <span class="badge-new">最新</span>
             </div>
-            <h2>初始发布</h2>
+            <h2>初始发布 🎉</h2>
             <ul>
-                <li><strong>发布:</strong> Chat w WebPage 允许您与任何活动标签页聊天。</li>
-                <li><strong>隐私:</strong> 采用 BYOK 架构，密钥本地存储。</li>
-                <li><strong>支持:</strong> 初步支持 OpenAI GPT-4 和 Claude 3.5 Sonnet。</li>
-                <li><strong>核心:</strong> 用于文章和文档的内容提取引擎。</li>
+                <li><strong>多服务商 AI:</strong> 支持 OpenAI、Anthropic、Google Gemini、DeepSeek、Azure OpenAI 等 10+ 服务商。</li>
+                <li><strong>BYOK 隐私保护:</strong> 自带密钥架构 - API 密钥本地存储，永不上传服务器。</li>
+                <li><strong>智能助手:</strong> 内置内容分析、翻译、解释等助手。</li>
+                <li><strong>快捷操作:</strong> 一键总结、提取要点、阅读笔记。</li>
+                <li><strong>演示模式:</strong> 每日 10 次免费对话，无需 API 密钥即可体验。</li>
+                <li><strong>内容引擎:</strong> 针对文章、文档和网页的高级内容提取。</li>
             </ul>
         </div>
 

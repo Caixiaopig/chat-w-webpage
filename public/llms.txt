@@ -9,7 +9,7 @@ Chat w WebPage is a privacy-first Chrome Extension that enables users to interfa
 
 ### 1. Multi-Model Support (BYOK)
 The extension implements a "Bring Your Own Key" architecture, supporting a vast array of providers:
-- **Major Providers**: OpenAI (GPT-5.2, o1), Anthropic (Claude 4.5), Google (Gemini 3.0), DeepSeek (V3, Reasoner).
+- **Major Providers**: OpenAI (GPT-5, o1), Anthropic (Claude 4.5), Google (Gemini 3), DeepSeek (V3, R1).
 - **Aggregators**: OpenRouter, SiliconFlow, Grok.
 - **Enterprise**: Azure OpenAI.
 - **Local/Privacy**: Ollama, LM Studio (local inference support).

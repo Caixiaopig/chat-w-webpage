@@ -7,6 +7,9 @@
     <title>功能特性 - Chat w WebPage</title>
     <link rel="icon" href="/favicon-48x48.png">
 
+    <!-- Theme Script -->
+    <script src="js/theme.js"></script>
+
     <!-- Design System -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -119,12 +122,42 @@
 
             <div class="nav-menu">
                 <a href="index-zh.html">首页</a>
-                <a href="features-zh.html" class="active" style="color:var(--primary-500)">功能</a>
+                <a href="index-zh.html#features">功能</a>
+                <a href="index-zh.html#pricing">定价</a>
                 <div class="lang-switcher" style="margin-left: 1rem;">
                     <a href="features.html" style="color:var(--text-secondary)">EN</a>
                     <span style="color:var(--text-muted)">/</span>
                     <a href="features-zh.html" class="active" style="color:var(--primary-500)">CN</a>
                 </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"
+                    style="background: none; border: none; cursor: pointer; color: var(--text-secondary); padding: 0.5rem; display: flex; align-items: center; justify-content: center; transition: color 0.2s;"
+                    title="点击切换：深色 → 浅色 → 跟随系统">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="icon-system" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </button>
                 <a href="download-zh.html" class="btn btn-primary">免费安装</a>
             </div>
         </div>
@@ -146,9 +179,9 @@
                 <h2>自带 AI 模型 (BYOK)</h2>
                 <p>何必局限于一个模型？安全连接您喜爱的 AI 服务商。在不同模型间瞬间切换，为每项任务获取最佳结果。</p>
                 <ul>
-                    <li><strong>OpenAI:</strong> 访问 GPT-4o, o1-preview 等最新模型。</li>
-                    <li><strong>Anthropic:</strong> 使用 Claude 3.5 Sonnet 进行长文本分析。</li>
-                    <li><strong>Google:</strong> 利用 Gemini 1.5 Pro 的超大上下文窗口。</li>
+                    <li><strong>OpenAI:</strong> 访问 GPT-5, o1-preview 等最新模型。</li>
+                    <li><strong>Anthropic:</strong> 使用 Claude 4.5 Sonnet 进行长文本分析。</li>
+                    <li><strong>Google:</strong> 利用 Gemini 3 Pro 的超大上下文窗口。</li>
                     <li><strong>本地模型:</strong> 连接 Ollama 或 LM Studio，确保绝对隐私。</li>
                 </ul>
             </div>
@@ -266,7 +299,7 @@
                         style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
                         <li><a href="index-zh.html#features">功能</a></li>
                         <li><a href="download-zh.html">下载</a></li>
-                        <li><a href="changelog.html">更新日志</a></li>
+                        <li><a href="changelog-zh.html">更新日志</a></li>
                     </ul>
                 </div>
                 <div>

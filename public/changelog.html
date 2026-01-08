@@ -7,6 +7,9 @@
     <title>Changelog - Chat w WebPage</title>
     <link rel="icon" href="/favicon-48x48.png">
 
+    <!-- Theme Script -->
+    <script src="js/theme.js"></script>
+
     <!-- Design System -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -109,12 +112,42 @@
 
             <div class="nav-menu">
                 <a href="index.html">Home</a>
-                <a href="features.html">Features</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#pricing">Pricing</a>
                 <div class="lang-switcher" style="margin-left: 1rem;">
                     <a href="changelog.html" class="active" style="color:var(--primary-500)">EN</a>
                     <span style="color:var(--text-muted)">/</span>
                     <a href="changelog-zh.html" style="color:var(--text-secondary)">CN</a>
                 </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme"
+                    style="background: none; border: none; cursor: pointer; color: var(--text-secondary); padding: 0.5rem; display: flex; align-items: center; justify-content: center; transition: color 0.2s;"
+                    title="Click to toggle: Dark → Light → System">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="icon-system" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </button>
                 <a href="download.html" class="btn btn-primary">Install Free</a>
             </div>
         </div>
@@ -131,51 +164,42 @@
     <!-- Timeline -->
     <div class="container timeline">
 
-        <!-- v1.2.0 -->
+        <!-- v1.1.0 -->
         <div class="release">
             <div>
-                <span class="version-tag">v1.2.0</span>
-                <span class="release-date">January 5, 2026</span>
-                <span class="badge-new">Latest</span>
+                <span class="version-tag">v1.1.0</span>
+                <span class="release-date">Coming Soon</span>
+                <span class="badge-new">Coming Soon</span>
             </div>
-            <h2>Reasoning & Models Update</h2>
+            <h2>Subscription & Improvements</h2>
             <ul>
-                <li><strong>New:</strong> Added support for DeepSeek Reasoner and Gemini 2.0 Flash thinking models.</li>
-                <li><strong>New:</strong> Visualized reasoning steps for compatible models (click to expand
-                    chain-of-thought).</li>
+                <li><strong>New:</strong> Subscription mode to lower the barrier for users.</li>
                 <li><strong>Improvement:</strong> Enhanced Markdown rendering for mathematical formulas (LaTeX).</li>
                 <li><strong>Fix:</strong> Resolved an issue where some customized API endpoints were not saving
                     correctly.</li>
             </ul>
         </div>
 
-        <!-- v1.1.0 -->
-        <div class="release">
-            <div>
-                <span class="version-tag">v1.1.0</span>
-                <span class="release-date">December 20, 2025</span>
-            </div>
-            <h2>Custom Assistants & Presets</h2>
-            <ul>
-                <li><strong>New:</strong> Create and save Custom Assistants with specific system prompts.</li>
-                <li><strong>New:</strong> Added "One-Click Summarize" preset for quick reading.</li>
-                <li><strong>Improvement:</strong> Added support for local models via Ollama (localhost:11434).</li>
-                <li><strong>UI:</strong> Dark mode is now the default experience.</li>
-            </ul>
-        </div>
 
         <!-- v1.0.0 -->
         <div class="release">
             <div>
                 <span class="version-tag">v1.0.0</span>
-                <span class="release-date">December 1, 2025</span>
+                <span class="release-date">January 9, 2026</span>
+                <span class="badge-new">Latest</span>
             </div>
-            <h2>Initial Release</h2>
+            <h2>Initial Release 🎉</h2>
             <ul>
-                <li><strong>Launch:</strong> Chat w WebPage allows you to chat with any active tab.</li>
-                <li><strong>Privacy:</strong> BYOK architecture with local storage for keys.</li>
-                <li><strong>Support:</strong> Initial support for OpenAI GPT-4 and Claude 3.5 Sonnet.</li>
-                <li><strong>Core:</strong> Content extraction engine for articles and documentation.</li>
+                <li><strong>Multi-Provider AI:</strong> Support for OpenAI, Anthropic, Google Gemini, DeepSeek, Azure
+                    OpenAI, and 10+ providers.</li>
+                <li><strong>BYOK Privacy:</strong> Bring Your Own Key architecture - API keys stored locally, never sent
+                    to our servers.</li>
+                <li><strong>Smart Assistants:</strong> Built-in assistants for content analysis, translation, and
+                    explanation.</li>
+                <li><strong>Quick Actions:</strong> One-click summarize, extract key points, and reading notes.</li>
+                <li><strong>Demo Mode:</strong> 10 free daily conversations to try without API keys.</li>
+                <li><strong>Content Engine:</strong> Advanced extraction for articles, documentation, and web pages.
+                </li>
             </ul>
         </div>
 

@@ -22,6 +22,9 @@
 
     <link rel="icon" href="/favicon-48x48.png">
 
+    <!-- Theme Script -->
+    <script src="js/theme.js"></script>
+
     <!-- Design System -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -49,6 +52,38 @@
                     <span style="color:var(--text-muted)">/</span>
                     <a href="index-zh.html" style="color:var(--text-secondary)">CN</a>
                 </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme"
+                    style="background: none; border: none; cursor: pointer; color: var(--text-secondary); padding: 0.5rem; display: flex; align-items: center; justify-content: center; transition: color 0.2s;"
+                    title="Click to toggle: Dark → Light → System">
+                    <!-- Sun icon: shown in dark mode (click to switch to light) -->
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon icon: shown in light mode (click to switch to system) -->
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <!-- System icon: shown in system mode (click to switch to dark) -->
+                    <svg class="icon-system" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </button>
                 <a href="download.html" class="btn btn-primary">Install Free</a>
             </div>
 
@@ -59,11 +94,11 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="images/backgrounds/hero-bg.png" alt="" class="hero-bg animate-pulse">
+        <div class="hero-bg animate-pulse"></div>
 
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="badge animate-float">Support latest models GPT-5.2 & Gemini 3.0 & Claude 4.5</div>
+                <div class="badge animate-float">Support latest models GPT-5 & Gemini 3 & Claude 4.5</div>
                 <h1>Transform how you interact with <span style="color: var(--primary-500)">web content</span></h1>
                 <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 2.5rem;">
                     Analyze, summarize, and chat with any web page. Powered by OpenAI (GPT-5 series), Anthropic (Claude
@@ -81,7 +116,7 @@
 
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <h3>10+</h3>
+                        <h3>12+</h3>
                         <p style="font-size: 0.875rem; margin: 0;">Top-tier AI Models</p>
                     </div>
                     <div class="stat-item">
@@ -125,7 +160,8 @@
                 <div class="card">
                     <div class="icon-box">🤖</div>
                     <h3>Model Freedom</h3>
-                    <p>Don't be locked in. Switch between GPT-5, Claude 4.5, Gemini 3, and local models instantly.</p>
+                    <p>Don't be locked in. Switch between GPT-5, Claude 4.5, Gemini 3, and local models instantly.
+                    </p>
                 </div>
             </div>
         </div>
@@ -137,6 +173,9 @@
             <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
                 <h2>Power Tools for Everyone</h2>
                 <p>Unlock your browsing productivity with powerful AI features.</p>
+                <a href="features.html"
+                    style="display: inline-block; margin-top: 1rem; color: var(--primary-500); font-weight: 500;">View
+                    all features →</a>
             </div>
 
             <div class="bento-grid">
@@ -227,15 +266,18 @@
                     <span class="provider-name">Grok</span>
                 </div>
                 <div class="provider-item">
-                    <img src="images/logos/zhipu.svg" class="provider-logo" alt="Zhipu AI">
+                    <img src="images/logos/zhipu.svg" class="provider-logo logo-dark" alt="Zhipu AI">
+                    <img src="images/logos/zhipu-color.svg" class="provider-logo logo-light" alt="Zhipu AI">
                     <span class="provider-name">Zhipu AI</span>
                 </div>
                 <div class="provider-item">
-                    <img src="images/logos/kimi.svg" class="provider-logo" alt="Moonshot">
+                    <img src="images/logos/kimi.svg" class="provider-logo logo-dark" alt="Moonshot">
+                    <img src="images/logos/kimi-color.svg" class="provider-logo logo-light" alt="Moonshot">
                     <span class="provider-name">Moonshot</span>
                 </div>
                 <div class="provider-item">
-                    <img src="images/logos/siliconcloud.svg" class="provider-logo" alt="SiliconFlow">
+                    <img src="images/logos/siliconcloud.svg" class="provider-logo logo-dark" alt="SiliconFlow">
+                    <img src="images/logos/siliconcloud-color.svg" class="provider-logo logo-light" alt="SiliconFlow">
                     <span class="provider-name">SiliconFlow</span>
                 </div>
                 <div class="provider-item">
@@ -286,7 +328,7 @@
                         <li style="display: flex; gap: 0.5rem; align-items: center;">✓ <strong>No</strong> API Key
                             Needed</li>
                         <li style="display: flex; gap: 0.5rem; align-items: center;">✓ Access Top Models (GPT-5, Claude
-                            4.5)
+                            3.5)
                         </li>
                         <li style="display: flex; gap: 0.5rem; align-items: center;">✓ Simple Monthly Fee</li>
                         <li style="display: flex; gap: 0.5rem; align-items: center;">✓ Priority Support</li>
@@ -343,8 +385,8 @@
 
                 <details class="card" style="padding: 1.5rem; cursor: pointer;">
                     <summary style="font-weight: 600; font-size: 1.125rem;">Which models are supported?</summary>
-                    <p style="margin-top: 1rem; margin-bottom: 0;">We support all major providers: OpenAI (GPT-4o, o1),
-                        Anthropic (Claude 3.5 Sonnet), Google (Gemini 1.5 Pro), DeepSeek, Azure OpenAI, and any
+                    <p style="margin-top: 1rem; margin-bottom: 0;">We support all major providers: OpenAI (GPT-5, o1),
+                        Anthropic (Claude 4.5 Sonnet), Google (Gemini 3 Pro), DeepSeek, Azure OpenAI, and any
                         OpenAI-compatible custom endpoint (like Ollama or LM Studio).</p>
                 </details>
             </div>
@@ -433,7 +475,7 @@
         "name": "Which AI models are supported?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We support OpenAI (GPT-4o, o1), Anthropic (Claude 3.5 Sonnet), Google (Gemini 1.5 Pro), DeepSeek, and any OpenAI-compatible endpoint (like Ollama)."
+          "text": "We support OpenAI (GPT-5, o1), Anthropic (Claude 4.5 Sonnet), Google (Gemini 3 Pro), DeepSeek, and any OpenAI-compatible endpoint (like Ollama)."
         }
       }]
     }

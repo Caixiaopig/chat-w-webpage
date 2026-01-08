@@ -7,6 +7,9 @@
     <title>Features - Chat w WebPage</title>
     <link rel="icon" href="/favicon-48x48.png">
 
+    <!-- Theme Script -->
+    <script src="js/theme.js"></script>
+
     <!-- Design System -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -119,12 +122,42 @@
 
             <div class="nav-menu">
                 <a href="index.html">Home</a>
-                <a href="features.html" class="active" style="color:var(--primary-500)">Features</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#pricing">Pricing</a>
                 <div class="lang-switcher" style="margin-left: 1rem;">
                     <a href="features.html" class="active" style="color:var(--primary-500)">EN</a>
                     <span style="color:var(--text-muted)">/</span>
                     <a href="features-zh.html" style="color:var(--text-secondary)">CN</a>
                 </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme"
+                    style="background: none; border: none; cursor: pointer; color: var(--text-secondary); padding: 0.5rem; display: flex; align-items: center; justify-content: center; transition: color 0.2s;"
+                    title="Click to toggle: Dark → Light → System">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="icon-system" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </button>
                 <a href="download.html" class="btn btn-primary">Install Free</a>
             </div>
         </div>
@@ -147,9 +180,9 @@
                 <p>Why settle for one model? Connect to your favorite AI providers securely. Switch between models
                     instantly to get the best results for each task.</p>
                 <ul>
-                    <li><strong>OpenAI:</strong> Access GPT-4o, o1-preview, and more.</li>
-                    <li><strong>Anthropic:</strong> Use Claude 3.5 Sonnet for long-context analysis.</li>
-                    <li><strong>Google:</strong> Leverage Gemini 1.5 Pro's massive context window.</li>
+                    <li><strong>OpenAI:</strong> Access GPT-5, o1-preview, and more.</li>
+                    <li><strong>Anthropic:</strong> Use Claude 4.5 Sonnet for long-context analysis.</li>
+                    <li><strong>Google:</strong> Leverage Gemini 3 Pro's massive context window.</li>
                     <li><strong>Local Models:</strong> Connect to Ollama or LM Studio for privacy.</li>
                 </ul>
             </div>
