@@ -35,7 +35,7 @@ Watch the AI think. Uniquely designed to visualize the step-by-step reasoning pr
 
 The extension is **free to use**. You only pay the AI providers for the models you choose to use.
 
-[**Download for Chrome**](https://chat-with-webpage.haoba.cloud/download.html)
+[**Download for Chrome**](https://chatpage.haoba.com)
 
 ## 🐛 Feedback & Support
 
