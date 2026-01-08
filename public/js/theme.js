@@ -110,3 +110,22 @@
     });
 
 })();
+
+/**
+ * FAQ Accordion Enhancement
+ * Makes the entire card clickable to toggle the details element
+ */
+document.addEventListener('DOMContentLoaded', function () {
+    const faqCards = document.querySelectorAll('details.card');
+
+    faqCards.forEach(function (details) {
+        details.addEventListener('click', function (e) {
+            // If clicking on the summary, let the browser handle it
+            if (e.target.closest('summary')) {
+                return;
+            }
+            // Toggle the details open/close state
+            details.open = !details.open;
+        });
+    });
+});
