@@ -10,9 +10,9 @@ Chat w WebPage is a powerful Chrome extension that allows you to summarize, anal
 
 ### 🤖 Support 12+ Top-tier Models (BYOK)
 Don't be locked into a single provider. We support all major AI models directly. Bring Your Own Key (BYOK) for maximum flexibility and cost control.
-*   **OpenAI**: GPT-4o, o1
-*   **Anthropic**: Claude 3.5 Sonnet
-*   **Google**: Gemini 1.5 Pro
+*   **OpenAI**: GPT-5, o1
+*   **Anthropic**: Claude 4.5 Sonnet
+*   **Google**: Gemini 3 Pro
 *   **DeepSeek**: DeepSeek V3, R1
 *   **Local Models**: Ollama, LM Studio (via local server)
 *   ...and many more via Azure, Grok, OpenRouter, and SiliconFlow.
