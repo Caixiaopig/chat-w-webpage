@@ -87,8 +87,12 @@
                 <a href="download.html" class="btn btn-primary">Install Free</a>
             </div>
 
-            <!-- Mobile Menu Toggle (To be implemented) -->
-            <button class="btn btn-secondary" style="display: none;">Menu</button>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
     </nav>
 
@@ -105,7 +109,7 @@
                     4.5 series), Google (Gemini 3 series), DeepSeek, Azure OpenAI, and any OpenAI-compatible custom
                     endpoint.
                 </p>
-                <div class="hero-buttons" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <div class="hero-buttons">
                     <a href="download.html" class="btn btn-glow">
                         Add to Chrome — It's Free
                     </a>

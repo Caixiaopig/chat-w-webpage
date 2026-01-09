@@ -102,13 +102,19 @@
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: var(--text-hero);
     line-height: 1.1;
     margin-bottom: 1.5rem;
     background: var(--hero-title-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .hero-stats {
@@ -284,17 +290,78 @@
     }
 }
 
+/* Mobile Menu Toggle Button - Base state (hidden on desktop) */
+.mobile-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: var(--transition-base);
+}
+
+.mobile-menu-toggle:hover {
+    background: var(--btn-secondary-bg);
+    border-color: var(--primary-500);
+}
+
+.mobile-menu-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
 @media (max-width: 768px) {
+
+    /* Mobile Navigation */
     .nav-menu {
         display: none;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        border-bottom: 1px solid var(--border-light);
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        z-index: 999;
     }
 
-    /* Mobile menu implementation needed */
+    .nav-menu.active {
+        display: flex;
+    }
 
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    /* Hero Responsive */
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: var(--text-hero);
     }
 
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    /* Grids */
     .value-grid {
         grid-template-columns: 1fr;
     }
@@ -303,12 +370,11 @@
     .pricing-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        /* Reset rows */
     }
 
     .bento-card,
     .card {
-        padding: 1.5rem;
+        padding: var(--space-card);
     }
 
     .span-2,
@@ -317,9 +383,16 @@
         grid-row: auto;
     }
 
+    /* Footer */
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+    }
+
+    /* Sections */
+    .features,
+    .pricing {
+        padding: var(--space-section) 0;
     }
 }
 
@@ -420,4 +493,29 @@
 
 :root.light .logo-dark {
     display: none;
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .providers-grid {
+        gap: 2rem 3rem;
+    }
+
+    .provider-logo {
+        height: 36px;
+    }
+
+    .hero {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
 }

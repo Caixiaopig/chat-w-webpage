@@ -54,6 +54,39 @@
     --radius-full: 9999px;
 
     /* 
+     * Typography Scale
+     * Fluid, responsive type system
+     */
+    --text-xs: 0.75rem;
+    /* 12px */
+    --text-sm: 0.875rem;
+    /* 14px */
+    --text-base: 1rem;
+    /* 16px */
+    --text-lg: 1.125rem;
+    /* 18px */
+    --text-xl: 1.25rem;
+    /* 20px */
+    --text-2xl: 1.5rem;
+    /* 24px */
+    --text-3xl: 1.875rem;
+    /* 30px */
+    --text-4xl: 2.25rem;
+    /* 36px */
+    --text-5xl: 3rem;
+    /* 48px */
+    --text-hero: 3.5rem;
+    /* 56px - Hero title */
+
+    /* 
+     * Spacing Scale
+     */
+    --space-section: 6rem;
+    --space-section-sm: 4rem;
+    --space-card: 2rem;
+    --space-card-sm: 1.25rem;
+
+    /* 
      * Effects 
      */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -151,4 +184,65 @@
 
     /* Button borders - Light Mode: 更明显的边框 */
     --btn-secondary-border: rgba(99, 102, 241, 0.4);
+}
+
+/* ========================================
+ * Responsive Typography & Spacing
+ * ======================================== */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+
+    :root,
+    :root.light {
+        --text-hero: 3rem;
+        /* 48px */
+        --text-5xl: 2.5rem;
+        /* 40px */
+        --text-4xl: 2rem;
+        /* 32px */
+        --space-section: 5rem;
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+
+    :root,
+    :root.light {
+        --text-hero: 2.25rem;
+        /* 36px */
+        --text-5xl: 2rem;
+        /* 32px */
+        --text-4xl: 1.75rem;
+        /* 28px */
+        --text-3xl: 1.5rem;
+        /* 24px */
+        --text-2xl: 1.25rem;
+        /* 20px */
+        --text-lg: 1rem;
+        /* 16px */
+        --space-section: 4rem;
+        --space-card: 1.5rem;
+    }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+
+    :root,
+    :root.light {
+        --text-hero: 1.875rem;
+        /* 30px */
+        --text-5xl: 1.75rem;
+        /* 28px */
+        --text-4xl: 1.5rem;
+        /* 24px */
+        --text-3xl: 1.25rem;
+        /* 20px */
+        --text-2xl: 1.125rem;
+        /* 18px */
+        --space-section: 3rem;
+        --space-card: 1.25rem;
+    }
 }
